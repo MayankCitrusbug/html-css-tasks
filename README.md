@@ -1,1 +1,1 @@
-# html-css-tasks
+# html-css-practical-tasks
