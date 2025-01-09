@@ -11,85 +11,110 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    
     <!-- navbar -->
-    <header class="header">
-      <nav class="header__nav container">
-        <img
-          class="brand-logo"
+    <header class="header container">
+      <nav class="header__nav">
+        <div class="header__nav__logo">
+          <img
+          class="header__nav__logo default-img"
           src="./assets/images/Group.png"
           alt="group image"
         />
-        <button class="primary-button">Sign inn</button>
+        </div>
+        <button class="primary-button hover-primary">Sign inn</button>
       </nav>
     </header>
 
     <!-- hero component -->
-    <div class="hero-group container">
-      <div class="half-div hero-text-part">
-        <h1 class="underline-heading">
-          Everything <img src="./assets/images/Vector.svg" alt="arrow" /> you
+    <section class="hero container">
+      <div class="hero__left container-half">
+        <h1 class="title">
+          <span class="relative">
+            <span class="">Everything</span>
+            <span class="absolute underline-img">
+              <img src="./assets/images/underline.svg" alt="underline" />
+            </span>
+          </span>
+          &nbsp; you <br />
+          need for teaching
         </h1>
-        <h1>need for teaching</h1>
-        <p>The future's most important tool for the teacher</p>
-        <p class="enter-email">
+        <h2 class="hero__left__subtitle">
+          The future's most important tool for the teacher
+        </h2>
+        <div class="hero__left__inputDiv relative">
           <input
-            class="enter-email-input"
+            class="hero__left__inputDiv__input"
             type="text"
             placeholder="Enter email"
           />
-          <span class="get-started"
+          <span class="hero__left__inputDiv__overlay absolute"
             >Get Started &nbsp;
             <img src="./assets/images/rightArrow.svg" alt="right arrow"
           /></span>
-        </p>
-        <p class="or-signin-text">or Sign in with</p>
-        <p class="signup-options-p">
+        </div>
+        <p class="hero__left__para">or Sign in with</p>
+        <div class="hero__left__signupDiv">
           <a href="#"
             ><img
-              class="singup-option"
+              class="hero__left__signupDiv__option hover-primary"
               src="./assets/images/feide_logo.png"
               alt="feide logo"
           /></a>
           <a href="#"
             ><img
-              class="singup-option"
+              class="hero__left__signupDiv__option hover-primary"
               src="./assets/images/vapps_logo.png"
               alt="vapps logo"
           /></a>
-        </p>
+        </div>
       </div>
-      <div class="half-div hero-img-part">
-        <img class="default-img" src="./assets/images/learning_bg.png" alt="" />
-        <div class="essential-card">
-          <p class="title">
+      <div class="hero__right relative container-half">
+        <div class="hero__right__imgDiv">
+          <img
+            class="hero__right__imgDiv__img"
+            src="./assets/images/learning_bg.png"
+            alt="teaching image"
+          />
+        </div>
+        <div class="hero__right__review-card absolute border">
+          <h3 class="hero__right__review-card__title">
             Essential Course For Your School sylabus Toolkit Consectetuer.
-          </p>
-          <div class="user">
-            <div class="details">
+          </h3>
+          <div class="hero__right__review-card__main">
+            <div class="hero__right__review-card__main__user">
               <img
                 src="./assets/images/Himaad_profile.png"
                 alt="profile photo"
               />
-              <div>
-                <h5 class="name">Himaad Riaz</h5>
-                <p class="designation">Principle of Amsterdam School</p>
+              <div class="hero__right__review-card__main__user__details">
+                <h6 class="hero__right__review-card__main__user__details__title">
+                  Himaad Riaz
+                </h6>
+                <p class="hero__right__review-card__main__user__details__para">
+                  Principle of Amsterdam School
+                </p>
               </div>
             </div>
-            <img
-              class="star-sparkle-img"
-              src="./assets/images/star-wink-sparkle.svg"
-              alt="star"
-            />
+            <div>
+              <img
+                class="hero__right__review-card__main__starimg"
+                src="./assets/images/star-wink-sparkle.svg"
+                alt="star"
+              />
+            </div>
           </div>
         </div>
-        <div class="total-users">
-          <img class="smiley-svg" src="./assets/images/smiley.svg" alt="" />
-          <h5>3.75K</h5>
-          <p>Teachers & Members</p>
+        <div class="hero__right__users-card absolute border">
+          <img
+            class="hero__right__users-card__img"
+            src="./assets/images/smiley.svg"
+            alt=""
+          />
+          <h5 class="hero__right__users-card__title">3.75K</h5>
+          <p class="hero__right__users-card__para">Teachers & Members</p>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Glimpse component -->
     <div class="parent-container glimpse-group">
