@@ -23,6 +23,8 @@ body {
   font-family: "DM Sans";
 }
 
+/* utility classes */
+
 .title {
   color: var(--blue);
   font-weight: 700;
@@ -53,8 +55,13 @@ body {
   height: auto;
 }
 
+.primary-img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -79,14 +86,93 @@ body {
   border: 1px solid rgba(195, 196, 198, 1);
 }
 
+.course-card {
+  background: var(--white);
+  padding: 14px;
+  margin: 0 auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.course-card__title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 20px;
+  margin: 15px 0;
+}
+
+.course-card__content {
+  font-size: 1.4rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.course-card__content__book {
+  display: flex;
+  align-items: center;
+}
+
+.course-card-icon {
+  margin-right: 7px;
+}
+
+.course-card__content__learning {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.course-card__content__learning__route {
+  display: flex;
+  align-items: center;
+}
+
+.course-card__hr {
+  border: 1px solid rgba(217, 219, 233, 1);
+}
+
+.course-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.course-card__footer__user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.course-card__footer__user__details__title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.course-card__footer__user__details__course {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.course-card__footer__icon {
+  padding: 5px 13px;
+  border-radius: 70px;
+  background: var(--gray);
+}
+
 /* header */
 
 .header {
   background: transparent;
+  padding: 30px 110px;
 }
 
 .header__nav {
-  padding: 30px 0;
   width: 100%;
   display: flex;
   gap: 40px;
@@ -97,6 +183,8 @@ body {
 /* hero section */
 
 .hero {
+  padding: 0 110px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,6 +195,7 @@ body {
   font-size: 2.4rem;
   font-weight: 500;
   line-height: 46px;
+  text-wrap: nowrap;
 }
 
 .hero__left__inputDiv__input {
@@ -147,6 +236,7 @@ body {
   margin: 10px 0 20px 0;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .hero__left__signupDiv__option {
@@ -161,7 +251,7 @@ body {
 }
 
 .hero__right__imgDiv {
-  margin: -50px -25px -10px -50px;
+  margin: -110px -100px 0px -60px;
 }
 
 .hero__right__imgDiv__img {
@@ -170,8 +260,8 @@ body {
 }
 
 .hero__right__review-card {
-  bottom: 15px;
-  right: 375px;
+  bottom: 6%;
+  right: 60%;
   background: var(--white);
   width: 380px;
   padding: 28px 20px 16px 20px;
@@ -216,12 +306,12 @@ body {
 }
 
 .hero__right__users-card {
+  right: 1%;
+  bottom: 29%;
   background: var(--white);
   border-radius: 16px;
   width: 234px;
   padding: 24px;
-  right: 30px;
-  bottom: 170px;
 }
 
 .hero__right__users-card__img {
@@ -246,66 +336,133 @@ body {
 
 /* glimpse */
 
-.glimpse-group {
+.classroom {
+  padding: 121px;
   background: rgba(246, 248, 251, 1);
 }
 
-.glimpse-group-heading {
-  font-size: 40px;
-  font-weight: 700;
+.classroom-heading {
   text-align: center;
+  margin-bottom: 50px;
+}
+
+.classroom__top {
+  display: flex;
+  gap: 20px;
+}
+
+.classroom__top__right {
+  
 }
 
 @media (max-width: 1279px) {
-  .hero__right__imgDiv {
-    margin: -50px 0 -10px -50px;
+  html {
+    font-size: 9px;
   }
-  .header,
+
+  .header {
+    padding: 30px 50px;
+  }
   .hero {
-    padding: 0 20px;
-  }
-  .hero__right__review-card {
-    bottom: 10px;
-    right: 350px;
-  }
-  .hero__right__users-card {
-    right: 30px;
-    bottom: 150px;
+    padding: 0 50px;
   }
 }
 
 @media (max-width: 1115px) {
-  .hero {
-    flex-direction: column-reverse;
-  }
-  .hero__right,
-  .hero__left {
-    width: 100%;
+  html {
+    font-size: 8px;
   }
   .hero__right__imgDiv {
-    width: 80%;
-    margin: -50px 0 10px 0;
+    margin: -80px -50px 0px 0px;
   }
   .hero__right__users-card {
-    right: 0;
-    bottom: 290px;
+    bottom: 30%;
+    width: 180px;
+    padding: 15px;
   }
   .hero__right__review-card {
-    right: 0;
-    bottom: 100px;
+    bottom: 5%;
+    right: 55%;
+    width: 330px;
+    padding: 14px 20px 8px 10px;
   }
 }
 
 @media (max-width: 1023px) {
   html {
-    font-size: 8px;
+    font-size: 7px;
+  }
+  .primary-button {
+    padding: 15px 30px;
+  }
+  .header {
+    padding: 20px 50px;
+  }
+  .header__nav__logo {
+    width: 170px;
+    height: auto;
+  }
+  .title {
+    line-height: 45px;
+  }
+  .hero__left__subtitle {
+    line-height: 30px;
+  }
+  .hero__left__inputDiv__input {
+    padding: 15px;
+    width: 70%;
+    margin: 10px 0;
+  }
+  .hero__left__inputDiv__overlay {
+    margin: 10px 0;
+    padding: 10px 30px;
+  }
+  .hero__left__para {
+    line-height: 20px;
+  }
+  .hero__left__signupDiv__option,
+  .hero__left__signupDiv__option {
+    padding: 15px 20px;
+    width: 100px;
+    height: auto;
+  }
+  .hero__right__imgDiv {
+    margin: -50px -20px 30px 20px;
   }
   .hero__right__users-card {
-    width: 200px;
-    bottom: 280px;
+    bottom: 28%;
+    width: 160px;
+    padding: 15px;
   }
   .hero__right__review-card {
-    width: 340px;
+    bottom: 5%;
+    right: 55%;
+    width: 260px;
+    padding: 8px 15px 8px 10px;
+  }
+
+  .hero__right__review-card__main__user__details__title {
+    line-height: 20px;
+    padding-bottom: 2px;
+  }
+
+  .hero__right__review-card__main__user__details__para {
+    font-weight: 500;
+    line-height: 15px;
+  }
+
+  .hero__right__review-card__main__user__img,
+  .hero__right__review-card__main__starimg {
+    width: 50px;
+    height: auto;
+  }
+
+  .hero__right__users-card__img {
+    width: 40px;
+    height: auto;
+  }
+  .underline-img {
+    bottom: -21px;
   }
 }
 
@@ -313,45 +470,106 @@ body {
   html {
     font-size: 7px;
   }
-  .hero__right__users-card {
-    width: 180px;
-    padding: 15px;
-    bottom: 200px;
+  .primary-button {
+    padding: 12px 25px;
   }
-  .hero__right__review-card {
-    width: 320px;
-    padding: 14px 20px 8px 10px;
-    bottom: 50px;
-  }
-  .hero__right__review-card__title {
-    margin-bottom: 6px;
-  }
-  .hero__right__review-card__main__user {
-    gap: 2px;
-  }
-  .hero__right__review-card__main__user__details__title {
-    padding-bottom: 0;
-  }
-}
-
-@media (max-width: 649px) {
-  html {
-    font-size: 6px;
-  }
-  .hero__right__imgDiv {
-    width: 80%;
-    margin: -10px 0 10px 0;
-  }
-  .hero__right__users-card {
+  .header__nav__logo {
     width: 150px;
-    bottom: 150px;
+    height: auto;
   }
+
+  .container-half {
+    width: 100%;
+  }
+
+  .header {
+    padding: 20px 30px;
+  }
+
+  .hero {
+    padding: 0 30px;
+    flex-direction: column-reverse;
+  }
+
+  .hero__right {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .hero__right__imgDiv {
+    margin: -50px 0 0 0;
+  }
+
+  .hero__right__imgDiv__img {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+  }
+
   .hero__right__review-card {
-   bottom: 10px;
-   width: 240px;
+    position: static;
+    padding: 10px;
+  }
+
+  .hero__left {
+    padding: 40px 0;
+  }
+
+  .hero__left__heading,
+  .hero__left__subtitle,
+  .hero__left__para {
+    text-align: center;
+  }
+
+  .hero__left__inputDiv__input {
+    width: 90%;
+  }
+  .hero__left__inputDiv__overlay {
+    right: 0;
+  }
+
+  .hero__left__signupDiv {
+    justify-content: center;
+  }
+  .hero__right__users-card {
+    right: 0;
+    position: relative;
   }
 }
 
 @media (max-width: 479px) {
-  
+  html {
+    font-size: 6px;
+  }
+  .primary-button {
+    padding: 10px 20px;
+  }
+  .title {
+    line-height: 35px;
+  }
+  .underline-img {
+    bottom: -17px;
+  }
+  .header__nav__logo {
+    width: 130px;
+    height: auto;
+  }
+  .header {
+    padding: 15px 20px;
+  }
+  .hero {
+    padding: 0 20px;
+  }
+  .hero__left__subtitle {
+    text-wrap: wrap;
+  }
+  .hero__right {
+    gap: 10px;
+  }
 }
