@@ -80,6 +80,8 @@ body {
 .underline-img {
   left: 0;
   bottom: -25px;
+  width: 100%;
+  height: auto;
 }
 
 .border {
@@ -190,14 +192,12 @@ body {
   justify-content: center;
   z-index: -1;
 }
-
 .hero__left__subtitle {
   font-size: 2.4rem;
   font-weight: 500;
   line-height: 46px;
   text-wrap: nowrap;
 }
-
 .hero__left__inputDiv__input {
   padding: 20px;
   width: 80%;
@@ -207,13 +207,11 @@ body {
   font-weight: 700;
   margin: 20px 0 15px 0;
 }
-
 .hero__left__para {
   font-size: 2rem;
   font-weight: 500;
   line-height: 46px;
 }
-
 .hero__left__inputDiv__overlay {
   margin: 20px 0 15px 0;
   background: var(--orange);
@@ -227,38 +225,31 @@ body {
   font-size: 1.8rem;
   font-weight: 700;
 }
-
 ::placeholder {
-  color: var(--gray);
+  color: rgb(192, 192, 192);
 }
-
 .hero__left__signupDiv {
   margin: 10px 0 20px 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-
 .hero__left__signupDiv__option {
   background: var(--gray);
   padding: 20px 30px;
   border-radius: 30px;
   margin-right: 8px;
 }
-
 .hero__right {
   z-index: -1;
 }
-
 .hero__right__imgDiv {
-  margin: -110px -100px 0px -60px;
+  margin: -110px -100px 0 -60px;
 }
-
 .hero__right__imgDiv__img {
   width: 100%;
   height: auto;
 }
-
 .hero__right__review-card {
   bottom: 6%;
   right: 60%;
@@ -268,43 +259,36 @@ body {
   border-radius: 16px;
   color: rgba(30, 30, 30, 1);
 }
-
 .hero__right__review-card__title {
   font-size: 1.8rem;
   font-weight: 400;
   margin-bottom: 12px;
 }
-
 .hero__right__review-card__main {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: -5px;
 }
-
 .hero__right__review-card__main__user {
   display: flex;
   gap: 5px;
   align-items: center;
 }
-
 .hero__right__review-card__main__user__details__title {
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 23px;
   padding-bottom: 4px;
 }
-
 .hero__right__review-card__main__user__details__para {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 18px;
 }
-
 .hero__right__review-card__main__starimg {
   margin: 0 -26px -8px 23px;
 }
-
 .hero__right__users-card {
   right: 1%;
   bottom: 29%;
@@ -313,19 +297,16 @@ body {
   width: 234px;
   padding: 24px;
 }
-
 .hero__right__users-card__img {
   position: absolute;
   top: 0;
   left: 4px;
 }
-
 .hero__right__users-card__title {
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
 }
-
 .hero__right__users-card__para {
   text-align: center;
   font-size: 1.8rem;
@@ -334,25 +315,270 @@ body {
   line-height: 23px;
 }
 
-/* glimpse */
+/* classroom */
 
 .classroom {
-  padding: 121px;
+  padding: 100px 121px;
   background: rgba(246, 248, 251, 1);
 }
-
 .classroom-heading {
   text-align: center;
   margin-bottom: 50px;
 }
-
 .classroom__top {
   display: flex;
   gap: 20px;
 }
-
 .classroom__top__right {
-  
+  display: flex;
+  flex-grow: 1;
+  position: relative;
+}
+.classroom__top__right__imgDiv {
+  height: 400px;
+  width: 100%;
+}
+.classroom__top__right__imgDiv_img {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.classroom__top__right__iconDiv {
+  padding: 34px 36px;
+  border-radius: 74px;
+  position: absolute;
+  background: var(--blue);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.classroom__bottom {
+  margin-top: 20px;
+  background: var(--blue);
+  color: white;
+  padding: 50px;
+  border-radius: 20px;
+}
+.classroom__bottom__heading {
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 32px;
+}
+.classroom__bottom__para {
+  margin-top: 10px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+/* about */
+
+.about {
+  padding: 100px 100px 0 100px;
+}
+.about__title {
+  text-align: center;
+}
+.about__text {
+  margin-top: 80px;
+  padding: 10px;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 37px;
+}
+.about__founders {
+  margin-top: 60px;
+}
+.about__founders__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  padding: 30px;
+  background: linear-gradient(96.05deg, #96d1e3 45.21%, #d8e4d6 96.81%);
+  border-radius: 20px;
+}
+.about__founders__card__imgsDiv {
+  padding: 15px 0 0 0;
+}
+.about__founders__card__imgsDiv__gradient {
+  width: 28px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.about__founders__card__imgsDiv__founder {
+  width: 291px;
+  height: auto;
+  margin-top: 20px;
+}
+.about__founders__card__details {
+  padding: 20px;
+  font-size: 1.6rem;
+}
+.about__founders__card__details__title {
+  font-size: 2.8rem;
+  font-weight: 700px;
+  line-height: 36px;
+}
+.about__founders__card__details__subtitle {
+  font-weight: 500;
+}
+.about__founders__card__details__address {
+  display: flex;
+  align-items: center;
+}
+.about__founders__card__details__hr {
+  border: 1px solid rgba(204, 214, 218, 1);
+  margin: 15px 0;
+}
+.about__founders__card__details__address__text {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 20px;
+}
+.about__founders__card__details__intro {
+  font-weight: 400;
+  line-height: 37px;
+}
+
+/* article */
+
+.article {
+  padding: 90px 120px 70px 120px;
+}
+.article__title {
+  text-align: center;
+}
+.article__container {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+}
+.article__container__card {
+  width: 384px;
+}
+.article__container__card__imgDiv__img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  object-fit: cover;
+}
+.article__container__card__title {
+  margin-top: 15px;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: center;
+}
+.article__btnDiv {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+/* uke */
+
+.uke {
+  padding-left: 100px;
+  background: var(--gray);
+  display: flex;
+}
+.uke__left {
+  padding: 20px 0 0 20px;
+}
+.uke__left__title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 32px;
+}
+.uke__left__title__underline {
+  left: -20px;
+  bottom: -25px;
+  width: 100%;
+  height: auto;
+}
+.uke__left__content {
+  margin-top: 100px;
+  max-width: 384px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.uke__left__content__subtitle {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 32px;
+}
+.uke__right__carousel_container {
+  position: relative;
+}
+.uke__right__carousel_container__slides {
+  display: none;
+}
+.uke__right__carousel_container__slides__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: -2px;
+}
+.uke__right__carousel_container__dots {
+  position: absolute;
+  right: 50%;
+  bottom: 2%;
+  transform: translate(50%, 0);
+}
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background: var(--white);
+  border: none;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.calendar {
+  padding: 150px 100px;
+  display: flex;
+}
+.calendar__left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.calendar__left__subtitle {
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 36px;
+}
+.calendar__right__container__base {
+  margin-top: -60px;
+  padding: 0 60px 0 120px;
+}
+.calendar__right__container__overlay {
+  padding: 10px 20px 0 40px;
 }
 
 @media (max-width: 1279px) {
@@ -365,6 +591,36 @@ body {
   }
   .hero {
     padding: 0 50px;
+  }
+  .hero__right__imgDiv {
+    margin: -110px -50px 0 0;
+  }
+  .classroom {
+    padding: 80px 50px;
+  }
+  .about {
+    padding: 50px 50px 0 50px;
+  }
+  .article {
+    padding: 70px 55px 50px 55px;
+  }
+  .uke {
+    padding-left: 50px;
+  }
+  .uke__left__content {
+    margin-top: 80px;
+    gap: 30px;
+  }
+
+  .calendar {
+    padding: 120px 50px;
+  }
+  .calendar__right__container__base {
+    margin-top: -40px;
+    padding: 0 50px 0 70px;
+  }
+  .calendar__right__container__overlay {
+    padding: 30px 20px 0 20px;
   }
 }
 
@@ -386,6 +642,24 @@ body {
     width: 330px;
     padding: 14px 20px 8px 10px;
   }
+  .classroom__top__right__iconDiv {
+    padding: 28px 30px;
+  }
+  .uke__left__content {
+    margin-top: 60px;
+    gap: 20px;
+  }
+
+  .calendar__left__subtitle {
+    line-height: 30px;
+  }
+  .calendar__right__container__base {
+    margin-top: -40px;
+    padding: 0 60px 0 50px;
+  }
+  .calendar__right__container__overlay {
+    padding: 30px 20px 0 20px;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -405,6 +679,10 @@ body {
   .title {
     line-height: 45px;
   }
+  .underline-img {
+    bottom: -21px;
+  }
+
   .hero__left__subtitle {
     line-height: 30px;
   }
@@ -440,29 +718,87 @@ body {
     width: 260px;
     padding: 8px 15px 8px 10px;
   }
-
   .hero__right__review-card__main__user__details__title {
     line-height: 20px;
     padding-bottom: 2px;
   }
-
   .hero__right__review-card__main__user__details__para {
     font-weight: 500;
     line-height: 15px;
   }
-
   .hero__right__review-card__main__user__img,
   .hero__right__review-card__main__starimg {
     width: 50px;
     height: auto;
   }
-
   .hero__right__users-card__img {
     width: 40px;
     height: auto;
   }
-  .underline-img {
-    bottom: -21px;
+
+  .classroom {
+    padding: 70px 50px;
+  }
+  .classroom-heading {
+    margin-bottom: 40px;
+  }
+  .classroom__top__right__iconDiv {
+    padding: 25px 28px;
+  }
+  .classroom__bottom {
+    padding: 40px;
+  }
+
+  .about__founders__card {
+    margin-top: 30px;
+    padding: 25px;
+  }
+  .about__founders__card__imgsDiv__founder {
+    width: 260px;
+  }
+  .about__text {
+    margin-top: 60px;
+    line-height: 30px;
+  }
+  .about__founders__card__details__intro,
+  .about__founders__card__details__title {
+    line-height: 30px;
+  }
+
+  .article {
+    padding: 60px 50px 40px 50px;
+  }
+  .article__container {
+    margin-top: 45px;
+  }
+  .article__container__card__title {
+    line-height: 25px;
+    margin-top: 10px;
+  }
+  .article__btnDiv {
+    margin-top: 40px;
+  }
+
+  .uke__left__content {
+    margin-top: 40px;
+    gap: 12px;
+  }
+  .uke__left__content__subtitle {
+    line-height: 25px;
+  }
+
+  .calendar {
+    padding: 100px 50px;
+  }
+  .calendar__left__subtitle {
+    line-height: 25px;
+  }
+  .calendar__right__container__base {
+    margin-top: -60px;
+    padding: 20px 20px 10px 10px;
+  }
+  .calendar__right__container__overlay {
+    padding: 40px 20px 0 10px;
   }
 }
 
@@ -477,20 +813,16 @@ body {
     width: 150px;
     height: auto;
   }
-
   .container-half {
     width: 100%;
   }
-
   .header {
     padding: 20px 30px;
   }
-
   .hero {
     padding: 0 30px;
     flex-direction: column-reverse;
   }
-
   .hero__right {
     position: static;
     display: flex;
@@ -499,11 +831,9 @@ body {
     align-items: center;
     gap: 15px;
   }
-
   .hero__right__imgDiv {
     margin: -50px 0 0 0;
   }
-
   .hero__right__imgDiv__img {
     width: 70%;
     display: block;
@@ -511,35 +841,117 @@ body {
     margin-right: auto;
     height: auto;
   }
-
   .hero__right__review-card {
     position: static;
     padding: 10px;
   }
-
   .hero__left {
     padding: 40px 0;
   }
-
   .hero__left__heading,
   .hero__left__subtitle,
   .hero__left__para {
     text-align: center;
   }
-
   .hero__left__inputDiv__input {
     width: 90%;
   }
   .hero__left__inputDiv__overlay {
     right: 0;
   }
-
   .hero__left__signupDiv {
     justify-content: center;
   }
   .hero__right__users-card {
     right: 0;
     position: relative;
+  }
+
+  .classroom {
+    padding: 50px 30px;
+  }
+  .classroom-heading {
+    margin-bottom: 30px;
+  }
+  .classroom__top {
+    flex-direction: column;
+  }
+  .classroom__bottom {
+    padding: 30px;
+  }
+
+  .about {
+    padding: 50px 30px 0 30px;
+  }
+  .about__founders__card {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .about__founders__card__details__title,
+  .about__founders__card__details__subtitle {
+    text-align: center;
+  }
+  .about__founders__card__details__hr {
+    margin: 10px 0;
+  }
+  .about__founders__card__imgsDiv__founder {
+    width: 220px;
+    margin-top: 10px;
+  }
+  .about__text {
+    margin-top: 40px;
+    line-height: 20px;
+  }
+  .about__founders__card__details__intro,
+  .about__founders__card__details__title {
+    line-height: 20px;
+  }
+  .about__founders__card__details {
+    padding: 15px;
+  }
+
+  .article {
+    padding: 45px 30px 35px 30px;
+  }
+  .article__container {
+    flex-wrap: wrap;
+  }
+  .article__container__card__title {
+    line-height: 18px;
+    margin-top: 10px;
+  }
+
+  .uke {
+    flex-direction: column;
+    padding-left: 0;
+  }
+  .uke__left {
+    padding: 20px 30px 40px 40px;
+  }
+  .uke__left__title__underline {
+    left: -10px;
+  }
+
+  .calendar {
+    flex-direction: column;
+    padding: 70px 30px;
+  }
+  .calendar__right__container__base {
+    margin-top: 0;
+    margin-left: -30px;
+    padding: 20px 40px 20px 40px;
+    width: 100%;
+  }
+  .calendar__right__container__overlay {
+    margin-left: -30px;
+    padding: 100px 30px 0 30px;
+    width: 100%;
+  }
+  .calendar__right__container__base__img,
+  .calendar__right__container__overlay__img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -571,5 +983,73 @@ body {
   }
   .hero__right {
     gap: 10px;
+  }
+
+  .classroom-heading {
+    margin-bottom: 20px;
+  }
+  .classroom__bottom {
+    padding: 20px;
+  }
+
+  .about {
+    padding: 35px 20px 0 20px;
+  }
+  .about__founders__card {
+    padding: 15px;
+  }
+  .about__founders__card__details__hr {
+    margin: 7px 0;
+  }
+  .about__founders__card__imgsDiv__founder {
+    width: 200px;
+  }
+  .about__text {
+    margin-top: 3cap;
+    line-height: 15px;
+  }
+  .about__founders__card__details__intro,
+  .about__founders__card__details__title {
+    line-height: 15px;
+  }
+  .about__founders__card__details {
+    padding: 10px;
+  }
+
+  .article {
+    padding: 40px 25px 30px 25px;
+  }
+  .article__btnDiv {
+    margin-top: 30px;
+  }
+
+  .uke__left {
+    padding: 15px 20px 30px 30px;
+  }
+  .uke__left__content {
+    margin-top: 30px;
+    gap: 10px;
+  }
+  .uke__left__content__subtitle {
+    line-height: 20px;
+  }
+  .uke__left__title__underline {
+    left: -10px;
+    bottom: -20px;
+  }
+
+  .calendar {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+  .calendar__right__container__base {
+    margin-left: -20px;
+    padding: 20px 20px 20px 40px;
+    width: 100%;
+  }
+  .calendar__right__container__overlay {
+    margin-left: -20px;
+    padding: 90px 20px 0 30px;
+    width: 100%;
   }
 }
