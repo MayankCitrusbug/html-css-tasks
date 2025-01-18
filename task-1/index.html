@@ -6,6 +6,8 @@
     <title>Undervisningsplan</title>
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <script src="./assets/js/jquery-3.7.1.min.js.js"></script>
   </head>
   <body>
     <!-- navbar -->
@@ -112,7 +114,7 @@
             </div>
             <div class="hero__right__review-card__main__star">
               <img
-                class="hero__right__review-card__main__star__img primary-img"
+                class="hero__right__review-card__main__star__img"
                 src="./assets/images/star-wink-sparkle.svg"
                 alt="star"
               />
@@ -124,18 +126,16 @@
 
     <!-- classroom section -->
     <section class="classroom">
-      <div class="classroom-container">
+      <div class="container">
         <h1 class="title classroom-heading">Glimpses from the classrooms</h1>
         <div class="classroom__top">
           <div class="course-card">
-            <div class="course-card__imgDiv">
-              <img
-                class="primary-img"
-                src="./assets/images/basic-english.png"
-                alt="basic learning"
-              />
-            </div>
-            <h4 class="course-card__title">Basic english learning🔥</h4>
+            <img
+              class="course-card__img"
+              src="./assets/images/basic-english.png"
+              alt="basic learning"
+            />
+            <h4 class="course-card__title">Music basics</h4>
             <div class="course-card__content">
               <div class="course-card__content__book">
                 <img
@@ -165,9 +165,11 @@
             <hr class="course-card__hr" />
             <div class="course-card__footer">
               <div class="course-card__footer__user">
-                <div>
-                  <img src="./assets/images/Johny_wino.png" alt="user image" />
-                </div>
+                <img
+                  class="course-card__footer__user__img"
+                  src="./assets/images/Johny-thumbnail.png"
+                  alt="user image"
+                />
                 <div class="course-card__footer__user__details">
                   <h4 class="course-card__footer__user__details__title">
                     Johny wino
@@ -177,9 +179,9 @@
                   </p>
                 </div>
               </div>
-              <div>
+              <div class="course-card__footer__icon">
                 <img
-                  class="primary-img course-card__footer__icon"
+                  class="course-card__footer__icon__like"
                   src="./assets/images/option-dots.svg"
                   alt=""
                 />
@@ -215,232 +217,272 @@
       </div>
     </section>
 
-    <section class="about">
-      <h1 class="title about__title">
-        About Undervisningsplan and <br />
-        <span class="relative">
-          Our Team
-          <img
-            class="absolute underline-img"
-            src="./assets/images/underline.svg"
-            alt="underline"
-          />
-        </span>
-      </h1>
-
-      <div class="about__text">
-        <p>
-          Welcome to <u>Ondervisningsplan</u> , a content platform for teachers
-          and pedagogues all over the country. Our vision is to strengthen
-          teaching in Norwegian primary schools through access to quality
-          resources and support for planning and implementation of teaching.
-        </p>
-        <p>
-          The idea for Ondervisningsplan came when the founder, Karen Wiik,
-          worked as a teacher. She noticed how talented colleagues created great
-          commitment and enthusiasm in their students with teaching plans
-          produced entirely without a textbook. At the same time, she also saw
-          that there was no structured system that easily allowed the teachers
-          to benefit from each other's good and creative teaching plans. Thus
-          began the journey towards the establishment of
-          <u>Undervisningsplan.no</u> .
-        </p>
-        <p>
-          The teaching plan was launched in the autumn of 2021, and today has
-          13,000 registered users and an ever-increasing teaching bank covering
-          over 2,000 teaching hours. We who work on the development of the
-          Curriculum are Karen Wiik and Tonje Brattås, two committed and
-          experienced teachers with a combined total of over 15 years of
-          teaching experience in primary schools. Both are trained teachers with
-          specialization in various fields.
-        </p>
-        <h4>
-          <strong><u> Readmore </u></strong>
-        </h4>
-      </div>
-
-      <div class="about__founders">
-        <div class="about__founders__card">
-          <div class="about__founders__card__imgsDiv relative">
+    <!-- about section -->
+    <section class="container">
+      <div class="about">
+        <h1 class="title about__title">
+          About Undervisningsplan and <br />
+          <span class="relative">
+            Our Team
             <img
-              class="about__founders__card__imgsDiv__founder"
-              src="./assets/images/Karen.png"
-              alt="founder image"
+              class="absolute underline-img"
+              src="./assets/images/underline.svg"
+              alt="underline"
             />
-            <img
-              class="about__founders__card__imgsDiv__gradient"
-              src="./assets/images/golden-icon.png"
-            />
-          </div>
-          <div class="about__founders__card__details">
-            <h2 class="about__founders__card__details__title">Karen Wiik</h2>
-            <p class="about__founders__card__details__subtitle">
-              Founder of Undervisningsplan.no AS
-            </p>
-            <hr class="about__founders__card__details__hr" />
-            <div class="about__founders__card__details__address">
-              <div class="about__founders__card__details__address__imgDiv">
-                <img
-                  class=""
-                  src="./assets/images/location.png"
-                  alt="location icon"
-                />
-                &nbsp;
-              </div>
-              <h3 class="about__founders__card__details__subtitle">
-                Kristiansund, Møre og Romsdal, Norway
-              </h3>
-            </div>
-            <hr class="about__founders__card__details__hr" />
-            <p class="about__founders__card__details__intro">
-              Hello! My name is Karen Wiik, and I am the founder of
-              Undervisningsplan. I am a qualified assistant professor and have
-              worked as a teacher for ten years at primary and secondary schools
-              where I have also been an MOT informant.
-            </p>
-          </div>
+          </span>
+        </h1>
+
+        <div class="about__text">
+          <p class="about__text__para">
+            Welcome to <u>Ondervisningsplan</u> , a content platform for
+            teachers and pedagogues all over the country. Our vision is to
+            strengthen teaching in Norwegian primary schools through access to
+            quality resources and support for planning and implementation of
+            teaching.
+          </p>
+          <p class="about__text__para">
+            The idea for Ondervisningsplan came when the founder, Karen Wiik,
+            worked as a teacher. She noticed how talented colleagues created
+            great commitment and enthusiasm in their students with teaching
+            plans produced entirely without a textbook. At the same time, she
+            also saw that there was no structured system that easily allowed the
+            teachers to benefit from each other's good and creative teaching
+            plans. Thus began the journey towards the establishment of
+            <u>Undervisningsplan.no</u> .
+          </p>
+          <p class="about__text__para">
+            The teaching plan was launched in the autumn of 2021, and today has
+            13,000 registered users and an ever-increasing teaching bank
+            covering over 2,000 teaching hours. We who work on the development
+            of the Curriculum are Karen Wiik and Tonje Brattås, two committed
+            and experienced teachers with a combined total of over 15 years of
+            teaching experience in primary schools. Both are trained teachers
+            with specialization in various fields.
+          </p>
+          <h4 class="about__text__para">
+            <strong><u> Readmore </u></strong>
+          </h4>
         </div>
-        <div class="about__founders__card">
-          <div class="about__founders__card__imgsDiv relative">
-            <img
-              class="about__founders__card__imgsDiv__founder"
-              src="./assets/images/Tonje.png"
-              alt="founder image"
-            />
-            <img
-              class="about__founders__card__imgsDiv__gradient"
-              src="./assets/images/golden-icon.png"
-            />
-          </div>
-          <div class="about__founders__card__details">
-            <h2 class="about__founders__card__details__title">Tonje Brattås</h2>
-            <p class="about__founders__card__details__subtitle">
-              COO and Co-founder i Undervisningsplan.no AS
-            </p>
-            <hr class="about__founders__card__details__hr" />
-            <div class="about__founders__card__details__address">
-              <div class="about__founders__card__details__address__imgDiv">
+
+        <div class="about__founders">
+          <div class="about__founders__card">
+            <div class="about__founders__card__imgsDiv">
+              <img
+                class="about__founders__card__imgsDiv__gradient"
+                src="./assets/images/golden-icon.png"
+              />
+              <img
+                class="about__founders__card__imgsDiv__founder"
+                src="./assets/images/Karen.png"
+                alt="founder image"
+              />
+            </div>
+            <div class="about__founders__card__details">
+              <div class="about__founders__card__details__header">
+                <div class="about__founders__card__details__header__text">
+                  <h2
+                    class="about__founders__card__details__header__text__title"
+                  >
+                    Karen Wiik
+                  </h2>
+                  <p
+                    class="about__founders__card__details__header__text__subtitle"
+                  >
+                    Founder of Undervisningsplan.no AS
+                  </p>
+                </div>
+                <div class="about__founders__card__details__header__icons">
+                  <img
+                    class="about__founders__card__details__header__icons__img"
+                    src="./assets/images/Linkedin.png"
+                    alt="Linkedin"
+                  />
+                  <img
+                    class="about__founders__card__details__header__icons__img"
+                    src="./assets/images/mail.png"
+                    alt="mail"
+                  />
+                </div>
+              </div>
+              <hr class="about__founders__card__details__hr" />
+              <div class="about__founders__card__details__address">
                 <img
-                  class=""
+                  class="about__founders__card__details__address__icon"
                   src="./assets/images/location.png"
                   alt="location icon"
                 />
-                &nbsp;
+                <h3 class="about__founders__card__details__address__text">
+                  Kristiansund, Møre og Romsdal, Norway
+                </h3>
               </div>
-              <h3 class="about__founders__card__details__subtitle">
-                Oslo, Norway
-              </h3>
+              <hr class="about__founders__card__details__hr" />
+              <p class="about__founders__card__details__intro">
+                Hello! My name is Karen Wiik, and I am the founder of
+                Undervisningsplan. I am a qualified assistant professor and have
+                worked as a teacher for ten years at primary and secondary
+                schools where I have also been an MOT informant.
+              </p>
             </div>
-            <hr class="about__founders__card__details__hr" />
-            <p class="about__founders__card__details__intro">
-              Hello! My name is Tonje Brattås, and I am a partner and board
-              member in Undervisningsplan. I am a lecturer with promotion in
-              Norwegian and history, and have 6 years' experience from the Oslo
-              School. I also have previous experience from start-up companies.
-            </p>
+          </div>
+          <div class="about__founders__card">
+            <div class="about__founders__card__imgsDiv">
+              <img
+                class="about__founders__card__imgsDiv__gradient"
+                src="./assets/images/golden-icon.png"
+              />
+              <img
+                class="about__founders__card__imgsDiv__founder"
+                src="./assets/images/Tonje.png"
+                alt="founder image"
+              />
+            </div>
+            <div class="about__founders__card__details">
+              <div class="about__founders__card__details__header">
+                <div class="about__founders__card__details__header__text">
+                  <h2
+                    class="about__founders__card__details__header__text__title"
+                  >
+                    Tonje Brattås
+                  </h2>
+                  <p
+                    class="about__founders__card__details__header__text__subtitle"
+                  >
+                    COO and Co-founder i Undervisningsplan.no AS
+                  </p>
+                </div>
+                <div class="about__founders__card__details__header__icons">
+                  <img
+                    class="about__founders__card__details__header__icons__img"
+                    src="./assets/images/Linkedin.png"
+                    alt="Linkedin"
+                  />
+                  <img
+                    class="about__founders__card__details__header__icons__img"
+                    src="./assets/images/mail.png"
+                    alt="mail"
+                  />
+                </div>
+              </div>
+              <hr class="about__founders__card__details__hr" />
+              <div class="about__founders__card__details__address">
+                <img
+                  class="about__founders__card__details__address__icon"
+                  src="./assets/images/location.png"
+                  alt="location icon"
+                />
+                <h3 class="about__founders__card__details__address__text">
+                  Oslo, Norway
+                </h3>
+              </div>
+              <hr class="about__founders__card__details__hr" />
+              <p class="about__founders__card__details__intro">
+                Hello! My name is Tonje Brattås, and I am a partner and board
+                member in Undervisningsplan. I am a lecturer with promotion in
+                Norwegian and history, and have 6 years' experience from the
+                Oslo School. I also have previous experience from start-up
+                companies.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <article class="article">
-      <h1 class="title article__title">
-        <span class="relative">
-          <span>Article and new</span>
-          <span class="absolute underline-img">
+    <!-- article and news -->
+    <article class="container">
+      <div class="article">
+        <h1 class="title article__title">
+          <span class="relative">
+            Article and News
             <img
-              class="primary-img"
+              class="absolute underline-img-article"
               src="./assets/images/underline.svg"
               alt="underline"
             />
           </span>
-        </span>
-      </h1>
-      <div class="article__container">
-        <div class="article__container__card">
-          <div class="article__container__card__imgDiv">
+        </h1>
+        <div class="article__container">
+          <div class="article__container__card">
             <img
-              class="article__container__card__imgDiv__img"
+              class="article__container__card__img"
               src="./assets/images/exclusive_design.png"
               alt="exclusive design"
             />
+            <h2 class="article__container__card__title">
+              Exclusive: Design for a Better World, a Discussion with Don Norman
+            </h2>
           </div>
-          <h2 class="article__container__card__title">
-            Exclusive: Design for a Better World, a Discussion with Don Norman
-          </h2>
-        </div>
-        <div class="article__container__card">
-          <div class="article__container__card__imgDiv">
+          <div class="article__container__card">
             <img
-              class="article__container__card__imgDiv__img primary"
+              class="article__container__card__img"
               src="./assets/images/strategy_custody.png"
               alt="exclusive design"
             />
+
+            <h2 class="article__container__card__title">
+              Strategy Custody: How to Secure Your Strategy's Success
+            </h2>
           </div>
-          <h2 class="article__container__card__title">
-            Strategy Custody: How to Secure Your Strategy's Success
-          </h2>
-        </div>
-        <div class="article__container__card">
-          <div class="article__container__card__imgDiv">
+          <div class="article__container__card">
             <img
-              class="article__container__card__imgDiv__img"
+              class="article__container__card__img"
               src="./assets/images/design_engaging_products.png"
               alt="exclusive design"
             />
+            <h2 class="article__container__card__title">
+              How to Design Engaging Products: Insights from Fortnite's UX
+            </h2>
           </div>
-          <h2 class="article__container__card__title">
-            How to Design Engaging Products: Insights from Fortnite's UX
-          </h2>
         </div>
-      </div>
-      <div class="article__btnDiv">
-        <button class="primary-btn primary-hover">View all</button>
+        <div class="article__btnDiv">
+          <button class="primary-btn primary-hover">View all</button>
+        </div>
       </div>
     </article>
 
+    <!-- uke carousel section -->
     <section class="uke">
-      <div class="uke__left container-half">
-        <h2 class="uke__left__title">User 13</h2>
-        <div class="uke__left__content">
-          <h1 class="title">
-            <span class="relative">
-              <span class="">Internasjonal</span>
-              <span class="absolute uke__left__title__underline">
+      <div class="uke-container">
+        <div class="uke__left container-half">
+          <h2 class="uke__left__title">User 13</h2>
+          <div class="uke__left__content">
+            <h1 class="title">
+              <span class="relative">
+                Internasjonal
                 <img
-                  class="primary-img"
+                  class="absolute uke__left__title__underline"
                   src="./assets/images/underline.svg"
                   alt="underline"
                 />
               </span>
-            </span>
-            &nbsp; uke
-          </h1>
-          <h2 class="uke__left__content__subtitle">
-            How to Design Engaging Products: Insights from Fortnite's UX
-          </h2>
-          <button class="primary-btn">See flere temauker</button>
+              uke
+            </h1>
+            <h2 class="uke__left__content__subtitle">
+              How to Design Engaging Products: Insights from Fortnite's UX
+            </h2>
+            <button class="primary-btn primary-hover">
+              See flere temauker
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="uke__right container-half">
-        <div class="uke__right__carousel_container">
-          <div class="uke__right__carousel_container__slides fade">
+        <div class="uke__carousel container-half">
+          <div class="uke__carousel__slides fade">
             <img
-              class="uke__right__carousel_container__slides__img"
+              class="uke__carousel__slides__img"
               src="./assets/images/carousel_image.png"
               alt="carousel image"
             />
           </div>
-          <div class="uke__right__carousel_container__slides fade">
+          <div class="uke__carousel__slides fade">
             <img
-              class="uke__right__carousel_container__slides__img"
+              class="uke__carousel__slides__img"
               src="./assets/images/carousel_image.png"
               alt="carousel image"
             />
           </div>
-          <div class="uke__right__carousel_container__slides fade">
+          <div class="uke__carousel__slides fade">
             <img
-              class="uke__right__carousel_container__slides__img"
+              class="uke__carousel__slides__img"
               src="./assets/images/carousel_image.png"
               alt="carousel image"
             />
@@ -454,31 +496,34 @@
       </div>
     </section>
 
-    <section class="calendar">
-      <div class="calendar__left container-half">
-        <h1 class="title calendar__left__title">
-          What is happening in the school world right now?
-        </h1>
-        <h2 class="calendar__left__subtitle">
-          Here is a practical calendar where you will find an overview of theme
-          weeks, deadlines, activities, current events and other things that are
-          relevant to you who work in the school.
-        </h2>
-        <button class="primary-btn">Explore the themed calendar</button>
-      </div>
-      <div class="calendar__right container-half">
-        <div class="calendar__right__container ralative">
-          <div class="calendar__right__container__base absolute">
+    <!-- calendar section -->
+    <section class="container-12">
+      <div class="calendar">
+        <div class="calendar__left container-half">
+          <h1 class="title calendar__left__title">
+            What is happening in the school world right now?
+          </h1>
+          <h2 class="calendar__left__subtitle">
+            Here is a practical calendar where you will find an overview of
+            theme weeks, deadlines, activities, current events and other things
+            that are relevant to you who work in the school.
+          </h2>
+          <button class="primary-btn primary-hover calendar__left__btn">
+            Explore the themed calendar
+          </button>
+        </div>
+        <div class="calendar__right relative container-half">
+          <div class="calendar__right__base">
             <img
-              class="calendar__right__container__base__img primary-img"
+              class="calendar__right__base__img"
               src="./assets/images/Eclipse.png"
               alt="circle image"
             />
           </div>
-          <div class="calendar__right__container__overlay absolute">
+          <div class="calendar__right__overlay absolute">
             <img
-              class="calendar__right__container__overlay__img primary-img"
-              src="./assets/images/schools_teaching_techniques_currently.png"
+              class="calendar__right__overlay__img"
+              src="./assets/images/theme-calendar.png"
               alt="circle image"
             />
           </div>
@@ -487,333 +532,512 @@
     </section>
 
     <section class="uos">
-      <div class="uos__heading">
-        <h1 class="title">
-          <span class="relative">
-            <span> UOs and material </span>
-            <span class="round-arrow absolute">
+      <div class="uos-container">
+        <div class="uos__heading">
+          <h1 class="title">
+            UOs and material
+            <span class="relative">
               <img
-                class="round-arrow__img"
+                class="absolute round-arrow-img"
                 src="./assets/images/round-arrow.svg"
                 alt="round arrow"
               />
             </span>
-          </span>
-        </h1>
-        <div class="uos__heading__arrows">
-          <span class="uos__heading__arrows__span"
-            ><img src="./assets/images/right-arrow.svg" alt="arrow"
-          /></span>
-          <span><img src="./assets/images/right-arrow.svg" alt="arrow" /></span>
+          </h1>
+          <div class="uos__heading__arrows">
+            <span class="uos__heading__arrows__icon primary-hover">
+              <img
+                class="uos__heading__arrows__icon__img"
+                src="./assets/images/right-arrow.svg"
+                alt="left arrow"
+              />
+            </span>
+            <span class="uos__heading__arrows__icon primary-hover">
+              <img
+                class="uos__heading__arrows__icon__img"
+                src="./assets/images/right-arrow.svg"
+                alt="right arrow"
+              />
+            </span>
+          </div>
         </div>
-      </div>
-      <div class="uos__content">
-        <div class="course-card">
-          <div class="course-card__imgDiv">
+        <div class="uos__content">
+          <div class="course-card">
             <img
-              class="primary-img"
+              class="course-card__img"
               src="./assets/images/basic-english.png"
               alt="basic learning"
             />
-          </div>
-          <h4 class="course-card__title">Music basics</h4>
-          <div class="course-card__content">
-            <div class="course-card__content__book">
-              <img
-                class="course-card-icon"
-                src="./assets/images/book-open.svg"
-                alt="book"
-              />
-              English, Norsk
-            </div>
-            <div class="course-card__content__learning">
-              <div class="course-card__content__learning__route">
+            <h4 class="course-card__title">Music basics</h4>
+            <div class="course-card__content">
+              <div class="course-card__content__book">
                 <img
                   class="course-card-icon"
-                  src="./assets/images/steps.svg"
-                  alt="steps"
-                />Steps : 3
+                  src="./assets/images/book-open.svg"
+                  alt="book"
+                />
+                English, Norsk
               </div>
-              <div class="course-card__content__learning__route">
+              <div class="course-card__content__learning">
+                <div class="course-card__content__learning__route">
+                  <img
+                    class="course-card-icon"
+                    src="./assets/images/steps.svg"
+                    alt="steps"
+                  />Steps : 3
+                </div>
+                <div class="course-card__content__learning__route">
+                  <img
+                    class="course-card-icon"
+                    src="./assets/images/clock.svg"
+                    alt="clock"
+                  />2hr
+                </div>
+              </div>
+            </div>
+            <hr class="course-card__hr" />
+            <div class="course-card__footer">
+              <div class="course-card__footer__user">
+                <div class="course-card__footer__user__profiles">
+                  <span class="course-card__footer__user__profile1">
+                    <img
+                      src="./assets/images/Johny-thumbnail.png"
+                      alt="user image"
+                    />
+                  </span>
+                  <span class="course-card__footer__user__profile2">
+                    <img
+                      src="./assets/images/Johny-thumbnail.png"
+                      alt="user image"
+                    />
+                  </span>
+                  <span class="course-card__footer__user__profile3">
+                    <img
+                      src="./assets/images/Johny-thumbnail.png"
+                      alt="user image"
+                    />
+                  </span>
+                </div>
+                <div class="course-card__footer__user__details">
+                  <h4 class="course-card__footer__user__details__title">
+                    Johny wino 4 more
+                  </h4>
+                  <p class="course-card__footer__user__details__course">
+                    School Management
+                  </p>
+                </div>
+              </div>
+              <div>
                 <img
-                  class="course-card-icon"
-                  src="./assets/images/clock.svg"
-                  alt="clock"
-                />2hr
+                  class="course-card__footer__icon__like"
+                  src="./assets/images/like.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
-          <hr class="course-card__hr" />
-          <div class="course-card__footer">
-            <div class="course-card__footer__user">
-              <div class="course-card__footer__user__profiles">
-                <span class="course-card__footer__user__profile1">
-                  <img
-                    src="./assets/images/Johny-thumbnail.png"
-                    alt="user image"
-                  />
-                </span>
-                <span class="course-card__footer__user__profile2">
-                  <img
-                    src="./assets/images/Johny-thumbnail.png"
-                    alt="user image"
-                  />
-                </span>
-                <span class="course-card__footer__user__profile3">
-                  <img
-                    src="./assets/images/Johny-thumbnail.png"
-                    alt="user image"
-                  />
-                </span>
-              </div>
-              <div class="course-card__footer__user__details">
-                <h4 class="course-card__footer__user__details__title">
-                  Johny wino 4 more
-                </h4>
-                <p class="course-card__footer__user__details__course">
-                  School Management
-                </p>
-              </div>
-            </div>
-            <div>
-              <img
-                class="primary-img course-card__footer__icon__like"
-                src="./assets/images/like.svg"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-        <div class="course-card">
-          <div class="course-card__imgDiv">
+          <div class="course-card">
             <img
-              class="primary-img"
+              class="course-card__img"
               src="./assets/images/english-learning.png"
               alt="basic learning"
             />
-          </div>
-          <h4 class="course-card__title">English Learning</h4>
-          <div class="course-card__content">
-            <div class="course-card__content__book">
-              <img
-                class="course-card-icon"
-                src="./assets/images/book-open.svg"
-                alt="book"
-              />
-              English, Norsk
-            </div>
-            <div class="course-card__content__learning">
-              <div class="course-card__content__learning__route">
+            <h4 class="course-card__title">English Learning</h4>
+            <div class="course-card__content">
+              <div class="course-card__content__book">
                 <img
                   class="course-card-icon"
-                  src="./assets/images/steps.svg"
-                  alt="steps"
-                />Steps : 3
+                  src="./assets/images/book-open.svg"
+                  alt="book"
+                />
+                English, Norsk
               </div>
-              <div class="course-card__content__learning__route">
+              <div class="course-card__content__learning">
+                <div class="course-card__content__learning__route">
+                  <img
+                    class="course-card-icon"
+                    src="./assets/images/steps.svg"
+                    alt="steps"
+                  />Steps : 3
+                </div>
+                <div class="course-card__content__learning__route">
+                  <img
+                    class="course-card-icon"
+                    src="./assets/images/clock.svg"
+                    alt="clock"
+                  />2hr
+                </div>
+              </div>
+            </div>
+            <hr class="course-card__hr" />
+            <div class="course-card__footer">
+              <div class="course-card__footer__user">
+                <div class="course-card__footer__user__profiles">
+                  <span class="course-card__footer__user__profile1">
+                    <img
+                      src="./assets/images/Himaad-thumbnail.png"
+                      alt="user image"
+                    />
+                  </span>
+                  <span class="course-card__footer__user__profile2">
+                    <img
+                      src="./assets/images/Johny-thumbnail.png"
+                      alt="user image"
+                    />
+                  </span>
+                  <span class="course-card__footer__user__profile3">
+                    <img
+                      src="./assets/images/Johny-thumbnail.png"
+                      alt="user image"
+                    />
+                  </span>
+                </div>
+                <div class="course-card__footer__user__details">
+                  <h4 class="course-card__footer__user__details__title">
+                    Johny wino 4 more
+                  </h4>
+                  <p class="course-card__footer__user__details__course">
+                    School Management
+                  </p>
+                </div>
+              </div>
+              <div>
                 <img
-                  class="course-card-icon"
-                  src="./assets/images/clock.svg"
-                  alt="clock"
-                />2hr
+                  class="course-card__footer__icon__like"
+                  src="./assets/images/like.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
-          <hr class="course-card__hr" />
-          <div class="course-card__footer">
-            <div class="course-card__footer__user">
-              <div class="course-card__footer__user__profiles">
-                <span class="course-card__footer__user__profile1">
-                  <img
-                    src="./assets/images/Himaad-thumbnail.png"
-                    alt="user image"
-                  />
-                </span>
-                <span class="course-card__footer__user__profile2">
-                  <img
-                    src="./assets/images/Johny-thumbnail.png"
-                    alt="user image"
-                  />
-                </span>
-                <span class="course-card__footer__user__profile3">
-                  <img
-                    src="./assets/images/Johny-thumbnail.png"
-                    alt="user image"
-                  />
-                </span>
-              </div>
-              <div class="course-card__footer__user__details">
-                <h4 class="course-card__footer__user__details__title">
-                  Johny wino 4 more
-                </h4>
-                <p class="course-card__footer__user__details__course">
-                  School Management
-                </p>
-              </div>
-            </div>
-            <div>
-              <img
-                class="primary-img course-card__footer__icon__like"
-                src="./assets/images/like.svg"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-        <div class="course-card">
-          <div class="course-card__imgDiv">
+          <div class="course-card">
             <img
-              class="primary-img"
+              class="course-card__img"
               src="./assets/images/draw-a-person.png"
               alt="basic learning"
             />
-          </div>
-          <h4 class="course-card__title">Beginer drawing class</h4>
-          <div class="course-card__content">
-            <div class="course-card__content__book">
-              <img
-                class="course-card-icon"
-                src="./assets/images/book-open.svg"
-                alt="book"
-              />
-              English, Norsk
-            </div>
-            <div class="course-card__content__learning">
-              <div class="course-card__content__learning__route">
+            <h4 class="course-card__title">Beginer drawing class</h4>
+            <div class="course-card__content">
+              <div class="course-card__content__book">
                 <img
                   class="course-card-icon"
-                  src="./assets/images/steps.svg"
-                  alt="steps"
-                />Steps : 3
+                  src="./assets/images/book-open.svg"
+                  alt="book"
+                />
+                English, Norsk
               </div>
-              <div class="course-card__content__learning__route">
+              <div class="course-card__content__learning">
+                <div class="course-card__content__learning__route">
+                  <img
+                    class="course-card-icon"
+                    src="./assets/images/steps.svg"
+                    alt="steps"
+                  />Steps : 3
+                </div>
+                <div class="course-card__content__learning__route">
+                  <img
+                    class="course-card-icon"
+                    src="./assets/images/clock.svg"
+                    alt="clock"
+                  />2hr
+                </div>
+              </div>
+            </div>
+            <hr class="course-card__hr" />
+            <div class="course-card__footer">
+              <div class="course-card__footer__user">
+                <div class="course-card__footer__user__profiles">
+                  <span class="course-card__footer__user__profile1">
+                    <img
+                      src="./assets/images/Nimisha-thumbnail.png"
+                      alt="user image"
+                    />
+                  </span>
+                  <span class="course-card__footer__user__profile2">
+                    <img
+                      src="./assets/images/Johny-thumbnail.png"
+                      alt="user image"
+                    />
+                  </span>
+                  <span class="course-card__footer__user__profile3">
+                    <img
+                      src="./assets/images/Johny-thumbnail.png"
+                      alt="user image"
+                    />
+                  </span>
+                </div>
+                <div class="course-card__footer__user__details">
+                  <h4 class="course-card__footer__user__details__title">
+                    Johny wino 4 more
+                  </h4>
+                  <p class="course-card__footer__user__details__course">
+                    School Management
+                  </p>
+                </div>
+              </div>
+              <div>
                 <img
-                  class="course-card-icon"
-                  src="./assets/images/clock.svg"
-                  alt="clock"
-                />2hr
+                  class="course-card__footer__icon__like"
+                  src="./assets/images/like.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
-          <hr class="course-card__hr" />
-          <div class="course-card__footer">
-            <div class="course-card__footer__user">
-              <div class="course-card__footer__user__profiles">
-                <span class="course-card__footer__user__profile1">
-                  <img
-                    src="./assets/images/Nimisha-thumbnail.png"
-                    alt="user image"
-                  />
-                </span>
-                <span class="course-card__footer__user__profile2">
-                  <img
-                    src="./assets/images/Johny-thumbnail.png"
-                    alt="user image"
-                  />
-                </span>
-                <span class="course-card__footer__user__profile3">
-                  <img
-                    src="./assets/images/Johny-thumbnail.png"
-                    alt="user image"
-                  />
-                </span>
-              </div>
-              <div class="course-card__footer__user__details">
-                <h4 class="course-card__footer__user__details__title">
-                  Johny wino 4 more
-                </h4>
-                <p class="course-card__footer__user__details__course">
-                  School Management
-                </p>
-              </div>
-            </div>
-            <div>
-              <img
-                class="primary-img course-card__footer__icon__like"
-                src="./assets/images/like.svg"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-        <div class="course-card">
-          <div class="course-card__imgDiv">
+          <div class="course-card">
             <img
-              class="primary-img"
+              class="course-card__img"
               src="./assets/images/do-it-yourself.png"
               alt="basic learning"
             />
-          </div>
-          <h4 class="course-card__title">Do it yourself</h4>
-          <div class="course-card__content">
-            <div class="course-card__content__book">
-              <img
-                class="course-card-icon"
-                src="./assets/images/book-open.svg"
-                alt="book"
-              />
-              English, Norsk
-            </div>
-            <div class="course-card__content__learning">
-              <div class="course-card__content__learning__route">
+            <h4 class="course-card__title">Do it yourself</h4>
+            <div class="course-card__content">
+              <div class="course-card__content__book">
                 <img
                   class="course-card-icon"
-                  src="./assets/images/steps.svg"
-                  alt="steps"
-                />Steps : 3
+                  src="./assets/images/book-open.svg"
+                  alt="book"
+                />
+                English, Norsk
               </div>
-              <div class="course-card__content__learning__route">
+              <div class="course-card__content__learning">
+                <div class="course-card__content__learning__route">
+                  <img
+                    class="course-card-icon"
+                    src="./assets/images/steps.svg"
+                    alt="steps"
+                  />Steps : 3
+                </div>
+                <div class="course-card__content__learning__route">
+                  <img
+                    class="course-card-icon"
+                    src="./assets/images/clock.svg"
+                    alt="clock"
+                  />2hr
+                </div>
+              </div>
+            </div>
+            <hr class="course-card__hr" />
+            <div class="course-card__footer">
+              <div class="course-card__footer__user">
+                <div class="course-card__footer__user__profiles">
+                  <span class="course-card__footer__user__profile1">
+                    <img
+                      src="./assets/images/Charley-thumbnail.png"
+                      alt="user image"
+                    />
+                  </span>
+                  <span class="course-card__footer__user__profile2">
+                    <img
+                      src="./assets/images/Johny-thumbnail.png"
+                      alt="user image"
+                    />
+                  </span>
+                  <span class="course-card__footer__user__profile3">
+                    <img
+                      src="./assets/images/Johny-thumbnail.png"
+                      alt="user image"
+                    />
+                  </span>
+                </div>
+                <div class="course-card__footer__user__details">
+                  <h4 class="course-card__footer__user__details__title">
+                    Johny wino 4 more
+                  </h4>
+                  <p class="course-card__footer__user__details__course">
+                    School Management
+                  </p>
+                </div>
+              </div>
+              <div>
                 <img
-                  class="course-card-icon"
-                  src="./assets/images/clock.svg"
-                  alt="clock"
-                />2hr
+                  class="course-card__footer__icon__like"
+                  src="./assets/images/like.svg"
+                  alt=""
+                />
               </div>
-            </div>
-          </div>
-          <hr class="course-card__hr" />
-          <div class="course-card__footer">
-            <div class="course-card__footer__user">
-              <div class="course-card__footer__user__profiles">
-                <span class="course-card__footer__user__profile1">
-                  <img
-                    src="./assets/images/Charley-thumbnail.png"
-                    alt="user image"
-                  />
-                </span>
-                <span class="course-card__footer__user__profile2">
-                  <img
-                    src="./assets/images/Johny-thumbnail.png"
-                    alt="user image"
-                  />
-                </span>
-                <span class="course-card__footer__user__profile3">
-                  <img
-                    src="./assets/images/Johny-thumbnail.png"
-                    alt="user image"
-                  />
-                </span>
-              </div>
-              <div class="course-card__footer__user__details">
-                <h4 class="course-card__footer__user__details__title">
-                  Johny wino 4 more
-                </h4>
-                <p class="course-card__footer__user__details__course">
-                  School Management
-                </p>
-              </div>
-            </div>
-            <div>
-              <img
-                class="primary-img course-card__footer__icon__like"
-                src="./assets/images/like.svg"
-                alt=""
-              />
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- testimonial -->
+    <section class="container-12">
+      <div class="testimonial">
+        <h1 class="title testimonial__title">Testimonial</h1>
+        <p class="testimonial__para">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus
+          pharetra malesuada. Mauris facilisis, sem sit amet dapibus Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit. In maximus pharetra
+          malesuada.
+        </p>
+        <div class="testimonial__container">
+          <div class="testimonial__container__card">
+            <img
+              class="testimonial__container__card__img"
+              src="./assets/images/Adhwatt-bhatt.png"
+              alt="Adhwatt-bhatt image"
+            />
+            <div class="testimonial__container__card__profile">
+              <h5 class="testimonial__container__card__profile__name">
+                Adhwtt bhatt
+              </h5>
+              <p class="testimonial__container__card__profile__info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                maximus pharetra malesuada. Mauris facilisis, sem sit amet
+                dapibus
+              </p>
+              <p class="testimonial__container__card__profile__footer">
+                Location
+              </p>
+            </div>
+          </div>
+          <div class="testimonial__container__card">
+            <img
+              class="testimonial__container__card__img"
+              src="./assets/images/Charley.png"
+              alt="Adhwatt-bhatt image"
+            />
+            <div class="testimonial__container__card__profile">
+              <h5 class="testimonial__container__card__profile__name">
+                Charley johnson
+              </h5>
+              <p class="testimonial__container__card__profile__info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                maximus pharetra malesuada. Mauris facilisis, sem sit amet
+                dapibus
+              </p>
+              <p class="testimonial__container__card__profile__footer">
+                Location
+              </p>
+            </div>
+          </div>
+          <div class="testimonial__container__card">
+            <img
+              class="testimonial__container__card__img"
+              src="./assets/images/Nimisha-jooy.png"
+              alt="Adhwatt-bhatt image"
+            />
+            <div class="testimonial__container__card__profile">
+              <h5 class="testimonial__container__card__profile__name">
+                Nimisha jooy
+              </h5>
+              <p class="testimonial__container__card__profile__info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                maximus pharetra malesuada. Mauris facilisis, sem sit amet
+                dapibus
+              </p>
+              <p class="testimonial__container__card__profile__footer">
+                Location
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial__faq">
+          <h1 class="title testimonial__faq__title">
+            frequently asked questions
+          </h1>
+          <div class="testimonial__faq__content">
+            <div class="testimonial__faq__content__box">
+              <h5 class="testimonial__faq__content__box__question">
+                What is the Teaching Plan?
+                <span class="accordion">
+                  <img
+                    class="accordion-icon"
+                    src="./assets/images/gt-sign.png"
+                    alt="toggle"
+                  />
+                </span>
+              </h5>
+              <p class="testimonial__faq__content__box__answer">
+                There are many exciting themes that are under production. At the
+                junior level, there will be theme weeks about, among other
+                things, Astrid Lindgren, bumblebees, dinosaurs and extinct
+                animals, "My Godfather and I" and many other great themes. At
+                intermediate level, many weeks are also ready - including Harry
+                Potter, Roald Dahl, outer space, literature week and "Leaving
+                traces". The youth level will have theme weeks such as "Creator
+                Week", "Dystopia; When democracy fails", "Fantasy", "Election
+                year 2021", "International week" and "My talent".
+              </p>
+            </div>
+            <div class="testimonial__faq__content__box">
+              <h5 class="testimonial__faq__content__box__question">
+                What is the Teaching Plan?
+                <span class="accordion">
+                  <img
+                    class="accordion-icon"
+                    src="./assets/images/gt-sign.png"
+                    alt="toggle"
+                  />
+                </span>
+              </h5>
+              <p class="testimonial__faq__content__box__answer">
+                There are many exciting themes that are under production. At the
+                junior level, there will be theme weeks about, among other
+                things, Astrid Lindgren, bumblebees, dinosaurs and extinct
+                animals, "My Godfather and I" and many other great themes. At
+                intermediate level, many weeks are also ready - including Harry
+                Potter, Roald Dahl, outer space, literature week and "Leaving
+                traces". The youth level will have theme weeks such as "Creator
+                Week", "Dystopia; When democracy fails", "Fantasy", "Election
+                year 2021", "International week" and "My talent".
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <div class="ninth-group">
+      <div class="footer-content">
+        <div class="title">Together we create the school of the future.</div>
+        <div>
+          <h5>Slider</h5>
+          <ul>
+            <li>To Undervisningsplan.no</li>
+            <li>Blog</li>
+          </ul>
+        </div>
+        <div>
+          <h5>Legal</h5>
+          <ul>
+            <li>Privacy statement</li>
+            <li>Information cookies</li>
+            <li>Terms of sale and agreement</li>
+            <li>Data processor agreement</li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <ul>
+            <li>Org.nr: 927 153 114</li>
+            <li>E-mail</li>
+            <li>Telephone</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-horizontal-line"></div>
+      <div class="footer-visitbar">
+        <div>
+          <img
+            src="./assets/images/footer_group_logo.png"
+            alt="brand logo"
+            width="30px"
+          />
+          Undervisningsplan
+        </div>
+        <span>© Curriculum 2021</span>
+        <div class="visit-icons">
+          <img src="./assets/images/Facebook.png" alt="facebook logo" />
+          <img src="./assets/images/Instagram.png" alt="instagram logo" />
+          <img src="./assets/images/Linkedin-footer.png" alt="linkedin logo" />
+        </div>
+      </div>
+    </div>
+    <div class="footer-end"></div>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
