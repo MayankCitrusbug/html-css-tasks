@@ -5,12 +5,14 @@
   --gray: rgba(237, 242, 247, 1);
   --orange: rgba(237, 176, 49, 1);
   --white: rgba(255, 255, 255, 1);
+  --gray-section: rgba(246, 248, 251, 1);
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  line-height: 0;
 }
 
 html {
@@ -28,15 +30,16 @@ body {
 .title {
   color: var(--blue);
   font-weight: 700;
-  line-height: 57px;
+  line-height: 5.7rem;
   font-size: 4rem;
+  letter-spacing: 0.4rem;
 }
-
-.primary-button {
+.primary-btn {
   padding: 20px 40px;
   width: max-content;
   white-space: nowrap;
   font-size: 1.8rem;
+  gap: 8px;
   font-weight: 700;
   border: 1px solid var(--blue);
   border-radius: 56px;
@@ -45,94 +48,87 @@ body {
   box-shadow: 0px 3px 12px 0px rgba(23, 59, 88, 0.3);
   cursor: pointer;
 }
-
-.hover-primary:hover {
+.primary-hover:hover {
   background: var(--orange);
+  border: none;
 }
-
-.default-img {
-  width: 100%;
-  height: auto;
+.secondary-hover:hover {
+  background: var(--gray);
 }
-
-.primary-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .container {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 100px;
 }
-
+.container-12 {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 120px;
+}
 .container-half {
   width: 50%;
 }
-
 .relative {
   position: relative;
 }
-
 .absolute {
   position: absolute;
 }
-
 .underline-img {
   left: 0;
-  bottom: -25px;
-  width: 100%;
+  bottom: -12px;
+  width: 199px;
   height: auto;
 }
-
 .border {
   border: 1px solid rgba(195, 196, 198, 1);
 }
 
 .course-card {
   background: var(--white);
-  padding: 14px;
-  margin: 0 auto;
+  padding: 14px 19px;
   border-radius: 8px;
   flex-shrink: 0;
+  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07);
 }
-
+.course-card__img {
+  width: 100%;
+  height: auto;
+}
 .course-card__title {
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 18px;
   line-height: 20px;
-  margin: 15px 0;
+  margin: 16px 0;
 }
-
 .course-card__content {
-  font-size: 1.4rem;
+  font-size: 14px;
+  line-height: 20px;
   font-weight: 400;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-
 .course-card__content__book {
   display: flex;
   align-items: center;
 }
-
 .course-card-icon {
-  margin-right: 7px;
+  margin-right: 10px;
 }
-
 .course-card__content__learning {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
 }
-
 .course-card__content__learning__route {
   display: flex;
+  width: 50%;
   align-items: center;
 }
 
 .course-card__hr {
+  margin: 20px 0 10px 0;
   border: 1px solid rgba(217, 219, 233, 1);
 }
 
@@ -140,7 +136,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
 }
 
 .course-card__footer__user {
@@ -160,21 +155,29 @@ body {
   font-weight: 400;
   line-height: 20px;
 }
-
+.course-card__footer__user__img {
+  width: 40px;
+  height: auto;
+}
 .course-card__footer__icon {
-  padding: 5px 13px;
+  padding: 2px 9px;
   border-radius: 70px;
   background: var(--gray);
+}
+
+.course-card__footer__icon__option {
+  width: 5px;
+  height: 20px;
 }
 
 /* header */
 
 .header {
   background: transparent;
-  padding: 30px 110px;
 }
 
 .header__nav {
+  padding: 33px 0;
   width: 100%;
   display: flex;
   gap: 40px;
@@ -182,40 +185,48 @@ body {
   align-items: center;
 }
 
+.header__nav__logo__img {
+  width: 240px;
+  height: auto;
+}
+
+.header__nav__btn {
+  z-index: 20;
+}
+
 /* hero section */
 
 .hero {
-  padding: 0 110px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: -1;
 }
 .hero__left__subtitle {
+  margin-top: 5px;
   font-size: 2.4rem;
   font-weight: 500;
-  line-height: 46px;
+  line-height: 4.6rem;
   text-wrap: nowrap;
 }
+.hero__left__inputDiv {
+  margin: 30px 0 20px 0;
+}
 .hero__left__inputDiv__input {
-  padding: 20px;
+  padding: 21px 170px 21px 30px;
   width: 80%;
   border: 1px solid var(--blue);
   border-radius: 100px;
   font-size: 1.6rem;
   font-weight: 700;
-  margin: 20px 0 15px 0;
 }
 .hero__left__para {
   font-size: 2rem;
   font-weight: 500;
-  line-height: 46px;
+  line-height: 4.6rem;
 }
 .hero__left__inputDiv__overlay {
-  margin: 20px 0 15px 0;
   background: var(--orange);
-  padding: 18px 40px;
+  padding: 19px 40px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -229,30 +240,42 @@ body {
   color: rgb(192, 192, 192);
 }
 .hero__left__signupDiv {
-  margin: 10px 0 20px 0;
+  margin-top: 10px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  gap: 10px;
 }
-.hero__left__signupDiv__option {
+.hero__left__signupDiv__feide {
+  padding: 16px 32px;
   background: var(--gray);
-  padding: 20px 30px;
-  border-radius: 30px;
-  margin-right: 8px;
+  border-radius: 56px;
 }
-.hero__right {
-  z-index: -1;
+
+.hero__left__signupDiv__vapps {
+  padding: 20px 23px 16px 23px;
+  background: var(--gray);
+  border-radius: 56px;
+}
+
+.hero__left__signupDiv__feide__img {
+  width: 84px;
+  height: auto;
+}
+.hero__left__signupDiv__vapps__img {
+  width: 102px;
+  height: auto;
 }
 .hero__right__imgDiv {
-  margin: -110px -100px 0 -60px;
+  margin: -110px -80px 0 -60px;
 }
 .hero__right__imgDiv__img {
   width: 100%;
   height: auto;
 }
 .hero__right__review-card {
-  bottom: 6%;
-  right: 60%;
+  bottom: 3%;
+  right: 59%;
   background: var(--white);
   width: 380px;
   padding: 28px 20px 16px 20px;
@@ -261,73 +284,94 @@ body {
 }
 .hero__right__review-card__title {
   font-size: 1.8rem;
+  line-height: 2.6rem;
   font-weight: 400;
   margin-bottom: 12px;
+  opacity: 0.9;
+  letter-spacing: 3%;
 }
 .hero__right__review-card__main {
   display: flex;
   align-items: center;
+  gap: 9px;
   justify-content: space-between;
-  margin-bottom: -5px;
 }
 .hero__right__review-card__main__user {
   display: flex;
-  gap: 5px;
+  gap: 8px;
   align-items: center;
+}
+.hero__right__review-card__main__user__img {
+  width: 56px;
+  height: auto;
 }
 .hero__right__review-card__main__user__details__title {
   font-size: 1.8rem;
   font-weight: 700;
-  line-height: 23px;
+  line-height: 2.3rem;
   padding-bottom: 4px;
+  letter-spacing: 3%;
 }
 .hero__right__review-card__main__user__details__para {
   font-size: 1.4rem;
   font-weight: 500;
-  line-height: 18px;
+  line-height: 1.8rem;
+  opacity: 0.7;
+  letter-spacing: 3%;
 }
-.hero__right__review-card__main__starimg {
-  margin: 0 -26px -8px 23px;
+.hero__right__review-card__main__star {
+  margin: 0 -25px -25px 0;
+}
+.hero__right__review-card__main__star__img {
+  width: 72px;
+  height: auto;
 }
 .hero__right__users-card {
-  right: 1%;
-  bottom: 29%;
+  right: 4%;
+  bottom: 28%;
   background: var(--white);
   border-radius: 16px;
   width: 234px;
   padding: 24px;
 }
-.hero__right__users-card__img {
+.hero__right__users-card__smiley {
   position: absolute;
   top: 0;
   left: 4px;
+  width: 50px;
+  height: auto;
 }
 .hero__right__users-card__title {
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
+  line-height: 3.2rem;
+  letter-spacing: 3%;
 }
 .hero__right__users-card__para {
-  text-align: center;
   font-size: 1.8rem;
+  margin-top: 8px;
   font-weight: 400;
-  color: rgba(30, 30, 30, 1);
-  line-height: 23px;
+  text-align: center;
+  line-height: 2.3rem;
+  letter-spacing: 3%;
+  color: rgba(30, 30, 30, 0.8);
 }
 
 /* classroom */
 
 .classroom {
-  padding: 100px 121px;
-  background: rgba(246, 248, 251, 1);
+  width: 100%;
+  padding: 115px 0;
+  background: var(--gray-section);
 }
 .classroom-heading {
   text-align: center;
-  margin-bottom: 50px;
 }
 .classroom__top {
+  margin-top: 60px;
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 .classroom__top__right {
   display: flex;
@@ -345,7 +389,7 @@ body {
   object-fit: cover;
 }
 .classroom__top__right__iconDiv {
-  padding: 34px 36px;
+  padding: 35px 36px;
   border-radius: 74px;
   position: absolute;
   background: var(--blue);
@@ -354,60 +398,64 @@ body {
   transform: translate(-50%, -50%);
 }
 .classroom__bottom {
-  margin-top: 20px;
+  margin-top: 30px;
   background: var(--blue);
   color: white;
-  padding: 50px;
+  padding: 48px 56px;
   border-radius: 20px;
 }
 .classroom__bottom__heading {
   font-size: 2.6rem;
   font-weight: 700;
-  line-height: 32px;
+  line-height: 3.2rem;
 }
 .classroom__bottom__para {
-  margin-top: 10px;
+  margin-top: 11px;
   font-size: 1.6rem;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 2.2rem;
 }
 
 /* about */
 
 .about {
-  padding: 100px 100px 0 100px;
+  margin-top: 100px;
 }
 .about__title {
   text-align: center;
 }
 .about__text {
   margin-top: 80px;
-  padding: 10px;
+  padding: 0 21px;
+}
+.about__text__para {
   font-size: 2rem;
   font-weight: 400;
-  line-height: 37px;
+  line-height: 3.7rem;
 }
 .about__founders {
   margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 .about__founders__card {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-  padding: 30px;
-  background: linear-gradient(96.05deg, #96d1e3 45.21%, #d8e4d6 96.81%);
+  background: linear-gradient(
+    96.05deg,
+    rgb(150 209 214 / 20%) 45.21%,
+    rgb(216 228 214 / 20%) 96.81%
+  );
   border-radius: 20px;
 }
 .about__founders__card__imgsDiv {
-  padding: 15px 0 0 0;
+  padding: 40px 0 40px 40px;
 }
 .about__founders__card__imgsDiv__gradient {
   width: 28px;
   height: auto;
-  position: absolute;
-  top: 0;
-  right: 0;
+  float: right;
 }
 .about__founders__card__imgsDiv__founder {
   width: 291px;
@@ -415,68 +463,95 @@ body {
   margin-top: 20px;
 }
 .about__founders__card__details {
-  padding: 20px;
-  font-size: 1.6rem;
+  padding: 60px 30px 30px 30px;
 }
-.about__founders__card__details__title {
+.about__founders__card__details__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about__founders__card__details__header__text__title {
   font-size: 2.8rem;
-  font-weight: 700px;
-  line-height: 36px;
+  font-weight: 700;
+  line-height: 3.6rem;
 }
-.about__founders__card__details__subtitle {
+.about__founders__card__details__header__text__subtitle {
+  margin-top: 6px;
+  font-size: 1.6rem;
   font-weight: 500;
+  line-height: 2.1rem;
+}
+.about__founders__card__details__header__icons {
+  display: flex;
+  gap: 2rem;
+}
+.about__founders__card__details__header__icons__img {
+  width: 50px;
+  height: auto;
 }
 .about__founders__card__details__address {
   display: flex;
   align-items: center;
 }
+.about__founders__card__details__address__icon {
+  width: 26px;
+  height: auto;
+}
 .about__founders__card__details__hr {
   border: 1px solid rgba(204, 214, 218, 1);
-  margin: 15px 0;
+  margin: 2rem 0;
 }
 .about__founders__card__details__address__text {
+  margin-left: 13px;
   font-weight: 500;
   font-size: 1.6rem;
-  line-height: 20px;
+  line-height: 2rem;
 }
 .about__founders__card__details__intro {
   font-weight: 400;
-  line-height: 37px;
+  font-size: 1.6rem;
+  line-height: 3.7rem;
 }
 
 /* article */
 
 .article {
-  padding: 90px 120px 70px 120px;
+  padding: 100px 0 80px 0;
 }
 .article__title {
   text-align: center;
+}
+.underline-img-article {
+  left: 40px;
+  bottom: -12px;
+  width: 235px;
+  height: auto;
 }
 .article__container {
   margin-top: 60px;
   display: flex;
   justify-content: center;
   align-items: stretch;
-  gap: 20px;
+  gap: 24px;
 }
 .article__container__card {
   width: 384px;
 }
-.article__container__card__imgDiv__img {
+.article__container__card__img {
   width: 100%;
   height: auto;
   border-radius: 24px;
   object-fit: cover;
 }
 .article__container__card__title {
-  margin-top: 15px;
+  margin-top: 16px;
   font-size: 2.2rem;
   font-weight: 500;
-  line-height: 32px;
+  line-height: 3.2rem;
   text-align: center;
 }
 .article__btnDiv {
-  margin-top: 50px;
+  margin-top: 60px;
   display: flex;
   justify-content: center;
 }
@@ -484,47 +559,52 @@ body {
 /* uke */
 
 .uke {
-  padding-left: 100px;
-  background: var(--gray);
+  width: 100%;
+  background: var(--gray-section);
+}
+.uke-container {
   display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .uke__left {
-  padding: 20px 0 0 20px;
+  padding: 32px 0 0 120px;
 }
 .uke__left__title {
   font-size: 2.2rem;
   font-weight: 500;
-  line-height: 32px;
+  line-height: 3.2rem;
 }
 .uke__left__title__underline {
   left: -20px;
-  bottom: -25px;
-  width: 100%;
+  bottom: -15px;
+  width: 235px;
   height: auto;
 }
 .uke__left__content {
-  margin-top: 100px;
+  margin-top: 106px;
   max-width: 384px;
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 40px;
 }
 .uke__left__content__subtitle {
   font-size: 2.2rem;
   font-weight: 500;
-  line-height: 32px;
+  line-height: 3.2rem;
 }
-.uke__right__carousel_container {
+.uke__carousel {
   position: relative;
+  top: 0;
+  right: 0;
 }
-.uke__right__carousel_container__slides {
+.uke__carousel__slides {
   display: none;
 }
-.uke__right__carousel_container__slides__img {
+.uke__carousel__slides__img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
-  margin-bottom: -2px;
 }
 .uke__right__carousel_container__dots {
   position: absolute;
@@ -560,52 +640,310 @@ body {
 }
 
 .calendar {
-  padding: 150px 100px;
+  padding: 90px 0;
   display: flex;
+  align-items: center;
+  /* justify-content: center; */
 }
 .calendar__left {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  padding-right: 60px;
 }
 .calendar__left__subtitle {
+  margin-top: 24px;
   font-size: 2.2rem;
   font-weight: 400;
-  line-height: 36px;
+  line-height: 3.6rem;
 }
-.calendar__right__container__base {
-  margin-top: -60px;
-  padding: 0 60px 0 120px;
+.calendar__left__btn {
+  margin-top: 40px;
 }
-.calendar__right__container__overlay {
-  padding: 10px 20px 0 40px;
+.calendar__right__base {
+  padding-right: 35px;
+  float: right;
+}
+.calendar__right__base__img {
+  width: 490px;
+  height: auto;
+}
+.calendar__right__overlay {
+  top: 73px;
+  right: 0;
+  width: 100%;
+  height: auto;
+}
+.calendar__right__overlay__img {
+  width: 633px;
+  height: auto;
+}
+
+.uos {
+  width: 100%;
+  background: var(--gray-section);
+}
+.uos-container {
+  padding: 80px 78px 80px 120px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.uos__heading {
+  display: flex;
+  justify-content: space-between;
+}
+.round-arrow-img {
+  top: 18px;
+  left: 21px;
+  width: 108px;
+  height: auto;
+}
+.uos__heading__arrows {
+  margin-bottom: -42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.uos__heading__arrows__icon {
+  padding: 19px 19px;
+  background: var(--gray);
+  border-radius: 56px;
+}
+.uos__heading__arrows__icon:first-child {
+  transform: rotate(180deg);
+}
+.uos__heading__arrows__icon__img {
+  width: 24px;
+  height: 24px;
+}
+.uos__content {
+  margin-top: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.course-card__footer__user__profiles {
+  position: relative;
+  width: 60px;
+  z-index: 2;
+}
+.course-card__footer__user__profile2 {
+  position: absolute;
+  left: 10px;
+  z-index: -1;
+}
+.course-card__footer__user__profile3 {
+  position: absolute;
+  left: 20px;
+  z-index: -2;
+}
+.course-card__footer__icon__like {
+  padding: 3px;
+  border-radius: 70px;
+  background: var(--gray);
+}
+
+.testimonial {
+  padding: 80px 0;
+}
+.testimonial__title {
+  text-align: center;
+}
+.testimonial__para {
+  margin: 30px 80px 80px 80px;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2.6rem;
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: rgba(24, 25, 31, 1);
+}
+.testimonial__container {
+  display: flex;
+  justify-content: center;
+  gap: 5.2rem;
+}
+.testimonial__container__card {
+  padding: 40px 35px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid rgba(222, 222, 222, 1);
+  border-radius: 5px;
+  box-shadow: 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.0283);
+}
+.testimonial__container__card__profile {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.testimonial__container__card__profile__name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: var(--orange);
+}
+.testimonial__container__card__profile__info {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.2px;
+}
+.testimonial__container__card__profile__footer {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+.testimonial__faq {
+  margin-top: 110px;
+}
+.testimonial__faq__title {
+  text-transform: capitalize;
+}
+.testimonial__faq__content {
+  margin-top: 40px;
+  border: 1px solid #dedede;
+}
+.testimonial__faq__content__box {
+  border-bottom: 1px solid #dedede;
+}
+.testimonial__faq__content__box__question {
+  padding: 23px 28px 22px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+.testimonial__faq__content__box__answer {
+  padding: 0 20px 20px 20px;
+  display: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.2px;
+  color: rgba(0, 0, 0, 1);
+}
+.accordion {
+  padding: 11px 12px;
+  border-radius: 30px;
+  background: var(--white);
+  border: 1px solid rgba(211, 211, 211, 1);
+}
+.accordion-open {
+  padding: 12px 13px;
+  background: var(--orange);
+  border: none;
+  transform: rotate(-90deg);
+}
+.accordion-close {
+  padding: 11px 12px;
+  background: var(--white);
+  border: 1px solid rgba(211, 211, 211, 1);
+  transform: rotate(0deg);
+}
+.accordion-icon {
+  width: 7px;
+  height: 9px;
+}
+
+.ninth-group {
+  background: #173b58;
+  color: white;
+  padding: 20px 20px 0 20px;
+}
+
+.footer-content {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-content h5 {
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.footer-content div {
+  min-width: 20%;
+}
+
+.footer-content .title {
+  font-size: 40px;
+  max-width: 20%;
+  font-weight: 700;
+}
+
+.footer-content ul {
+  margin-top: 30px;
+}
+
+.footer-content li {
+  list-style: none;
+  font-size: 18px;
+  padding: 5px 0px;
+}
+
+.footer-visitbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 10px 0;
+}
+
+.visit-icons img {
+  padding: 10px;
+  background: #ffffff14;
+  border-radius: 25px;
+}
+
+.footer-end {
+  height: 5px;
+  background: linear-gradient(246.27deg, #f4e353 21.64%, #edb031 65.09%);
 }
 
 @media (max-width: 1279px) {
   html {
     font-size: 9px;
   }
-
-  .header {
-    padding: 30px 50px;
-  }
-  .hero {
+  .container,
+  .container-12 {
     padding: 0 50px;
   }
   .hero__right__imgDiv {
-    margin: -110px -50px 0 0;
+    margin: -90px -50px 20px 0;
   }
+  .hero__right__review-card {
+    bottom: 3%;
+    right: 53%;
+  }
+  .hero__right__users-card {
+    right: 0%;
+    bottom: 26%;
+  }
+
   .classroom {
-    padding: 80px 50px;
+    padding: 100px 0;
   }
-  .about {
-    padding: 50px 50px 0 50px;
-  }
+
   .article {
-    padding: 70px 55px 50px 55px;
+    padding: 80px 0 70px 0;
   }
-  .uke {
-    padding-left: 50px;
+
+  .uke__left {
+    padding: 30px 0 0 50px;
   }
   .uke__left__content {
     margin-top: 80px;
@@ -613,90 +951,111 @@ body {
   }
 
   .calendar {
-    padding: 120px 50px;
+    padding: 70px 0;
   }
-  .calendar__right__container__base {
-    margin-top: -40px;
-    padding: 0 50px 0 70px;
+  .calendar__right__base {
+    padding-right: 70px;
+    margin: 0 auto;
   }
-  .calendar__right__container__overlay {
-    padding: 30px 20px 0 20px;
+  .calendar__right__base__img {
+    width: 400px;
+    height: auto;
+  }
+  .calendar__right__overlay {
+    top: 50px;
+    right: 0;
+    width: 100%;
+    height: auto;
+  }
+  .calendar__right__overlay__img {
+    width: 530px;
+    height: auto;
+  }
+
+  .uos-container {
+    padding: 80px 50px;
+  }
+  .uos__content {
+    margin-top: 50px;
   }
 }
 
 @media (max-width: 1115px) {
-  html {
-    font-size: 8px;
+  .container {
+    padding: 0 40px;
   }
   .hero__right__imgDiv {
-    margin: -80px -50px 0px 0px;
+    margin: -80px -40px 30px 0px;
+  }
+  .hero__left__inputDiv {
+    margin: 24px 0 15px 0;
   }
   .hero__right__users-card {
-    bottom: 30%;
-    width: 180px;
-    padding: 15px;
+    bottom: 25%;
+    width: 202px;
+    padding: 20px;
   }
   .hero__right__review-card {
-    bottom: 5%;
-    right: 55%;
-    width: 330px;
-    padding: 14px 20px 8px 10px;
+    bottom: 3%;
+    right: 53%;
+    width: 280px;
+    padding: 20px 15px 12px 15px;
   }
-  .classroom__top__right__iconDiv {
-    padding: 28px 30px;
-  }
-  .uke__left__content {
-    margin-top: 60px;
-    gap: 20px;
+  .hero__right__users-card__smiley {
+    width: 45px;
   }
 
-  .calendar__left__subtitle {
-    line-height: 30px;
+  .classroom {
+    padding: 90px 0;
   }
-  .calendar__right__container__base {
-    margin-top: -40px;
-    padding: 0 60px 0 50px;
+  .classroom__top {
+    margin-top: 50px;
   }
-  .calendar__right__container__overlay {
-    padding: 30px 20px 0 20px;
+  .classroom__top__right__iconDiv {
+    padding: 30px 31px;
   }
 }
 
 @media (max-width: 1023px) {
   html {
-    font-size: 7px;
+    font-size: 8px;
   }
-  .primary-button {
+  .container {
+    padding: 0 40px;
+  }
+  .primary-btn {
     padding: 15px 30px;
   }
-  .header {
-    padding: 20px 50px;
-  }
-  .header__nav__logo {
-    width: 170px;
+  .header__nav__logo__img {
+    width: 210px;
     height: auto;
   }
-  .title {
-    line-height: 45px;
-  }
   .underline-img {
-    bottom: -21px;
+    width: 175px;
   }
-
+  .hero__left__subtitle {
+    text-wrap: wrap;
+  }
+  .hero__left__inputDiv {
+    margin: 20px 0 10px 0;
+  }
   .hero__left__subtitle {
     line-height: 30px;
   }
   .hero__left__inputDiv__input {
-    padding: 15px;
-    width: 70%;
-    margin: 10px 0;
+    padding: 15px 140px 15px 20px;
   }
   .hero__left__inputDiv__overlay {
-    margin: 10px 0;
-    padding: 10px 30px;
+    padding: 11px 30px;
   }
   .hero__left__para {
     line-height: 20px;
+  }
+  .hero__left__signupDiv__feide__img {
+    width: 60px;
+  }
+  .hero__left__signupDiv__vapps__img {
+    width: 70px;
   }
   .hero__left__signupDiv__option,
   .hero__left__signupDiv__option {
@@ -705,16 +1064,16 @@ body {
     height: auto;
   }
   .hero__right__imgDiv {
-    margin: -50px -20px 30px 20px;
+    margin: -50px -20px 50px 0;
   }
   .hero__right__users-card {
-    bottom: 28%;
-    width: 160px;
+    bottom: 38%;
+    width: 175px;
     padding: 15px;
   }
   .hero__right__review-card {
-    bottom: 5%;
-    right: 55%;
+    bottom: 3%;
+    right: 30%;
     width: 260px;
     padding: 8px 15px 8px 10px;
   }
@@ -725,6 +1084,9 @@ body {
   .hero__right__review-card__main__user__details__para {
     font-weight: 500;
     line-height: 15px;
+  }
+  .hero__right__review-card__main__star {
+    margin: 0 -25px -18px 0;
   }
   .hero__right__review-card__main__user__img,
   .hero__right__review-card__main__starimg {
@@ -737,87 +1099,140 @@ body {
   }
 
   .classroom {
-    padding: 70px 50px;
+    padding: 80px 0;
   }
-  .classroom-heading {
-    margin-bottom: 40px;
+  .classroom__top {
+    margin-top: 45px;
+    gap: 25px;
   }
   .classroom__top__right__iconDiv {
     padding: 25px 28px;
   }
   .classroom__bottom {
-    padding: 40px;
+    margin-top: 25px;
+    padding: 40px 48px;
   }
 
-  .about__founders__card {
-    margin-top: 30px;
-    padding: 25px;
-  }
-  .about__founders__card__imgsDiv__founder {
-    width: 260px;
+  .about {
+    margin-top: 80px;
   }
   .about__text {
-    margin-top: 60px;
-    line-height: 30px;
+    margin-top: 65px;
   }
-  .about__founders__card__details__intro,
-  .about__founders__card__details__title {
-    line-height: 30px;
+  .about__founders {
+    margin-top: 45px;
   }
 
   .article {
-    padding: 60px 50px 40px 50px;
+    padding: 70px 0 60px 0;
+  }
+  .underline-img-article {
+    left: 30px;
+    bottom: -10px;
+    width: 180px;
   }
   .article__container {
     margin-top: 45px;
+    flex-wrap: wrap;
+  }
+  .article__container__card {
+    width: 320px;
   }
   .article__container__card__title {
-    line-height: 25px;
     margin-top: 10px;
   }
   .article__btnDiv {
     margin-top: 40px;
   }
 
+  .uke__left {
+    padding: 20px 0 0 40px;
+  }
   .uke__left__content {
-    margin-top: 40px;
-    gap: 12px;
+    margin-top: 50px;
+    gap: 18px;
+  }
+
+  .uke__left__title__underline {
+    left: -15px;
+    bottom: -10px;
+    width: 180px;
+    height: auto;
   }
   .uke__left__content__subtitle {
     line-height: 25px;
   }
 
-  .calendar {
-    padding: 100px 50px;
+  .uos-container {
+    padding: 70px 40px;
   }
-  .calendar__left__subtitle {
-    line-height: 25px;
+  .uos__content {
+    margin-top: 45px;
   }
+}
+
+@media (max-width: 949px) {
   .calendar__right__container__base {
-    margin-top: -60px;
-    padding: 20px 20px 10px 10px;
+    margin-top: -10px;
+    padding: 0 40px;
   }
   .calendar__right__container__overlay {
-    padding: 40px 20px 0 10px;
+    padding: 60px 20px 0 10px;
+  }
+}
+
+@media (max-width: 849px) {
+  .hero__right__review-card {
+    right: 0%;
   }
 }
 
 @media (max-width: 767px) {
-  html {
-    font-size: 7px;
+  .container {
+    padding: 0 25px;
   }
-  .primary-button {
-    padding: 12px 25px;
+  .primary-btn {
+    padding: 12px 24px;
   }
-  .header__nav__logo {
-    width: 150px;
-    height: auto;
+  .course-card {
+    margin: 0 auto;
+  }
+  .header__nav__logo__img {
+    width: 180px;
   }
   .container-half {
     width: 100%;
   }
-  .header {
-    padding: 20px 30px;
+
+  .header__nav {
+    padding: 25px 0;
+  }
+
+  .about__founders__card {
+    flex-direction: column;
+  }
+  .about__founders__card__imgsDiv {
+    padding: 30px;
+    margin: 0 auto;
+    width: 310px;
+  }
+  .about__founders__card__imgsDiv__founder {
+    width: 250px;
+    margin-top: 15px;
+  }
+  .about__founders__card__details {
+    padding: 20px;
+  }
+  .about__founders__card__details__header__icons__img {
+    width: 35px;
+  }
+  .about__founders__card__details__address__icon {
+    width: 22px;
+  }
+
+  .hero__left__inputDiv {
+    width: 50%;
+    margin: 20px auto 10px auto;
   }
   .hero {
     padding: 0 30px;
@@ -853,8 +1268,14 @@ body {
   .hero__left__para {
     text-align: center;
   }
+  .hero__left__inputDiv {
+    width: 100%;
+  }
   .hero__left__inputDiv__input {
     width: 90%;
+  }
+  .hero__left__inputDiv__input {
+    padding: 15px 130px 15px 20px;
   }
   .hero__left__inputDiv__overlay {
     right: 0;
@@ -868,112 +1289,82 @@ body {
   }
 
   .classroom {
-    padding: 50px 30px;
-  }
-  .classroom-heading {
-    margin-bottom: 30px;
+    padding: 70px 0;
   }
   .classroom__top {
+    margin-top: 40px;
     flex-direction: column;
   }
   .classroom__bottom {
-    padding: 30px;
-  }
-
-  .about {
-    padding: 50px 30px 0 30px;
-  }
-  .about__founders__card {
-    flex-direction: column;
-    padding: 20px;
-  }
-  .about__founders__card__details__title,
-  .about__founders__card__details__subtitle {
-    text-align: center;
-  }
-  .about__founders__card__details__hr {
-    margin: 10px 0;
-  }
-  .about__founders__card__imgsDiv__founder {
-    width: 220px;
-    margin-top: 10px;
-  }
-  .about__text {
-    margin-top: 40px;
-    line-height: 20px;
-  }
-  .about__founders__card__details__intro,
-  .about__founders__card__details__title {
-    line-height: 20px;
-  }
-  .about__founders__card__details {
-    padding: 15px;
+    padding: 32px 40px;
   }
 
   .article {
-    padding: 45px 30px 35px 30px;
+    padding: 60px 0 50px 0;
   }
   .article__container {
-    flex-wrap: wrap;
+    gap: 35px;
+  }
+  .article__container__card {
+    width: 100%;
   }
   .article__container__card__title {
     line-height: 18px;
     margin-top: 10px;
   }
 
-  .uke {
+  .uke-container {
     flex-direction: column;
-    padding-left: 0;
   }
   .uke__left {
-    padding: 20px 30px 40px 40px;
+    padding: 15px 25px 20px 25px;
+    text-align: center;
   }
-  .uke__left__title__underline {
-    left: -10px;
+  .uke__left__content {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 50px;
+    gap: 18px;
+    align-items: center;
   }
 
-  .calendar {
+  .uos-container {
+    padding: 60px 25px;
+  }
+  .round-arrow-img {
+    top: 13px;
+    left: 12px;
+    width: 75px;
+  }
+  .uos__heading {
     flex-direction: column;
-    padding: 70px 30px;
   }
-  .calendar__right__container__base {
-    margin-top: 0;
-    margin-left: -30px;
-    padding: 20px 40px 20px 40px;
-    width: 100%;
+  .uos__heading__arrows {
+    margin-top: 18px;
+    margin-bottom: 0;
+    justify-content: flex-end;
   }
-  .calendar__right__container__overlay {
-    margin-left: -30px;
-    padding: 100px 30px 0 30px;
-    width: 100%;
+  .uos__heading__arrows__icon {
+    padding: 14px 15px;
   }
-  .calendar__right__container__base__img,
-  .calendar__right__container__overlay__img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  .uos__heading__arrows__icon__img {
+    width: 20px;
+    height: 20px;
+  }
+  .uos__content {
+    margin-top: 30px;
   }
 }
 
 @media (max-width: 479px) {
-  html {
-    font-size: 6px;
+  .container {
+    padding: 0 15px;
   }
-  .primary-button {
-    padding: 10px 20px;
+  .primary-btn {
+    padding: 12px 18px;
   }
-  .title {
-    line-height: 35px;
-  }
-  .underline-img {
-    bottom: -17px;
-  }
-  .header__nav__logo {
-    width: 130px;
-    height: auto;
-  }
-  .header {
-    padding: 15px 20px;
+  .header__nav__logo__img {
+    width: 150px;
   }
   .hero {
     padding: 0 20px;
@@ -981,75 +1372,48 @@ body {
   .hero__left__subtitle {
     text-wrap: wrap;
   }
+  .hero__left__inputDiv__input {
+    padding: 15px 145px 15px 20px;
+  }
   .hero__right {
     gap: 10px;
   }
+  .hero__right__imgDiv {
+    margin: -35px 0 0 0;
+  }
 
-  .classroom-heading {
-    margin-bottom: 20px;
+  .classroom {
+    padding: 60px 0;
+  }
+  .classroom__top {
+    margin-top: 35px;
   }
   .classroom__bottom {
-    padding: 20px;
-  }
-
-  .about {
-    padding: 35px 20px 0 20px;
-  }
-  .about__founders__card {
-    padding: 15px;
-  }
-  .about__founders__card__details__hr {
-    margin: 7px 0;
-  }
-  .about__founders__card__imgsDiv__founder {
-    width: 200px;
-  }
-  .about__text {
-    margin-top: 3cap;
-    line-height: 15px;
-  }
-  .about__founders__card__details__intro,
-  .about__founders__card__details__title {
-    line-height: 15px;
-  }
-  .about__founders__card__details {
-    padding: 10px;
-  }
-
-  .article {
-    padding: 40px 25px 30px 25px;
-  }
-  .article__btnDiv {
-    margin-top: 30px;
+    padding: 24px 32px;
   }
 
   .uke__left {
-    padding: 15px 20px 30px 30px;
+    padding: 15px;
   }
   .uke__left__content {
-    margin-top: 30px;
-    gap: 10px;
+    margin-top: 40px;
+    gap: 15px;
   }
   .uke__left__content__subtitle {
     line-height: 20px;
   }
   .uke__left__title__underline {
     left: -10px;
-    bottom: -20px;
+    bottom: -10px;
   }
 
-  .calendar {
-    flex-direction: column;
-    padding: 50px 20px;
+  .uos-container {
+    padding: 50px 15px;
   }
-  .calendar__right__container__base {
-    margin-left: -20px;
-    padding: 20px 20px 20px 40px;
-    width: 100%;
+  .uos__content {
+    margin-top: 25px;
   }
-  .calendar__right__container__overlay {
-    margin-left: -20px;
-    padding: 90px 20px 0 30px;
+  .course-card {
     width: 100%;
   }
 }
