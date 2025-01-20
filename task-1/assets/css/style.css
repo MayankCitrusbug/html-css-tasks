@@ -28,7 +28,6 @@ body {
 /* utility classes */
 
 .title {
-  color: var(--blue);
   font-weight: 700;
   line-height: 5.7rem;
   font-size: 4rem;
@@ -126,30 +125,25 @@ body {
   width: 50%;
   align-items: center;
 }
-
 .course-card__hr {
   margin: 20px 0 10px 0;
   border: 1px solid rgba(217, 219, 233, 1);
 }
-
 .course-card__footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .course-card__footer__user {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
 .course-card__footer__user__details__title {
   font-size: 14px;
   font-weight: 700;
   line-height: 20px;
 }
-
 .course-card__footer__user__details__course {
   font-size: 12px;
   font-weight: 400;
@@ -163,11 +157,6 @@ body {
   padding: 2px 9px;
   border-radius: 70px;
   background: var(--gray);
-}
-
-.course-card__footer__icon__option {
-  width: 5px;
-  height: 20px;
 }
 
 /* header */
@@ -367,6 +356,16 @@ body {
 }
 .classroom-heading {
   text-align: center;
+}
+.course-card__footer__btn-dot {
+  border: none;
+  padding: 5px 13px;
+  border-radius: 70px;
+  background: rgba(237, 242, 247, 1);
+}
+.course-card__footer__btn-dot__icon {
+  width: 5px;
+  height: 20px;
 }
 .classroom__top {
   margin-top: 60px;
@@ -639,11 +638,12 @@ body {
   }
 }
 
+/* calendar */
+
 .calendar {
   padding: 90px 0;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
 }
 .calendar__left {
   padding-right: 60px;
@@ -658,23 +658,22 @@ body {
   margin-top: 40px;
 }
 .calendar__right__base {
-  padding-right: 35px;
-  float: right;
-}
-.calendar__right__base__img {
+  margin-left: 75px;
   width: 490px;
-  height: auto;
+  height: 490px;
+  background: var(--gray);
+  border-radius: 50%;
 }
 .calendar__right__overlay {
-  top: 73px;
-  right: 0;
-  width: 100%;
-  height: auto;
+  left: 0;
+  top: 70px;
 }
 .calendar__right__overlay__img {
   width: 633px;
   height: auto;
 }
+
+/* uos */
 
 .uos {
   width: 100%;
@@ -737,14 +736,19 @@ body {
   left: 20px;
   z-index: -2;
 }
-.course-card__footer__icon__like {
-  padding: 3px;
+.course-card__footer__btn {
+  border: none;
+  padding: 3px 3px;
   border-radius: 70px;
-  background: var(--gray);
+  background: rgba(237, 242, 247, 1);
+}
+.course-card__footer__btn__img {
+  width: 24px;
+  height: 24px;
 }
 
 .testimonial {
-  padding: 80px 0;
+  padding: 80px 0 102px 0;
 }
 .testimonial__title {
   text-align: center;
@@ -762,7 +766,7 @@ body {
 .testimonial__container {
   display: flex;
   justify-content: center;
-  gap: 5.2rem;
+  gap: 52px;
 }
 .testimonial__container__card {
   padding: 40px 35px;
@@ -771,6 +775,7 @@ body {
   border: 1px solid rgba(222, 222, 222, 1);
   border-radius: 5px;
   box-shadow: 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.0283);
+  max-width: 366px;
 }
 .testimonial__container__card__profile {
   margin-top: 30px;
@@ -811,6 +816,10 @@ body {
 .testimonial__faq__content__box {
   border-bottom: 1px solid #dedede;
 }
+.testimonial__faq__content__box-open {
+  background: rgba(246, 246, 246, 1);
+  border-bottom: 1px solid #dedede;
+}
 .testimonial__faq__content__box__question {
   padding: 23px 28px 22px 25px;
   display: flex;
@@ -820,10 +829,27 @@ body {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.1px;
+  color: rgba(37, 43, 66, 1);
 }
+
+.testimonial__faq__content__box__question-open {
+  padding: 18px 28px 29px 29px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: rgba(24, 60, 89, 1);
+  border-left: 3px solid var(--orange);
+}
+
 .testimonial__faq__content__box__answer {
-  padding: 0 20px 20px 20px;
+  padding: 0 48px 35px 35px;
   display: none;
+}
+.testimonial__faq__content__box__answer__p {
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
@@ -853,65 +879,98 @@ body {
   height: 9px;
 }
 
-.ninth-group {
-  background: #173b58;
+.footer {
+  background: var(--blue);
+}
+.footer__container {
+  max-width: 1440px;
+  margin: 0 auto;
   color: white;
-  padding: 20px 20px 0 20px;
 }
-
-.footer-content {
-  margin: 10px 0;
+.footer__container__top {
+  padding: 40px 47px 0 60px;
   display: flex;
-  justify-content: space-between;
+  gap: 19px;
+  align-items: center;
+  justify-content: center;
+}
+.footer__container__top__title {
+  min-width: 385px;
+}
+.footer__container__top__content {
+  display: flex;
   align-items: stretch;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 18px;
+  width: 100%;
 }
-
-.footer-content h5 {
-  font-size: 18px;
+.footer__container__top__content__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.footer__container__top__content__menu__heading {
+  font-family: DM Sans;
+  font-size: 1.8rem;
   font-weight: 400;
-  opacity: 0.6;
+  line-height: 2.3rem;
+  letter-spacing: 0.02em;
+  opacity: 0.5;
 }
-
-.footer-content div {
-  min-width: 20%;
-}
-
-.footer-content .title {
-  font-size: 40px;
-  max-width: 20%;
-  font-weight: 700;
-}
-
-.footer-content ul {
-  margin-top: 30px;
-}
-
-.footer-content li {
+.footer__container__top__content__menu__options {
   list-style: none;
-  font-size: 18px;
-  padding: 5px 0px;
 }
-
-.footer-visitbar {
+.footer__container__top__content__menu__options__option {
+  font-family: DM Sans;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: 0.02em;
+  color: var(--white);
+}
+.footer__container__top__content__menu__options__option__link {
+  color: var(--white);
+}
+.footer__hr {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 20px 0;
+}
+.footer__container__bottom {
+  padding: 0 60px 20px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 25px;
   flex-wrap: wrap;
-  gap: 40px;
-  padding: 10px 0;
 }
-
-.visit-icons img {
-  padding: 10px;
-  background: #ffffff14;
-  border-radius: 25px;
+.footer__container__bottom__group {
+  width: 240px;
+  height: auto;
 }
-
-.footer-end {
-  height: 5px;
+.footer__container__bottom__curriculum {
+  font-family: DM Sans;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.3rem;
+  letter-spacing: 0.02em;
+}
+.footer__container__bottom__icons {
+  display: flex;
+  gap: 16px;
+}
+.footer__container__bottom__icons__link {
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 62px;
+}
+.footer__container__bottom__icons__link__img {
+  width: 24px;
+  height: 24px;
+}
+.footer__gradient {
   background: linear-gradient(246.27deg, #f4e353 21.64%, #edb031 65.09%);
+  height: 10px;
 }
 
 @media (max-width: 1279px) {
@@ -951,25 +1010,18 @@ body {
   }
 
   .calendar {
-    padding: 70px 0;
+    padding: 80px 0;
   }
   .calendar__right__base {
-    padding-right: 70px;
-    margin: 0 auto;
-  }
-  .calendar__right__base__img {
-    width: 400px;
-    height: auto;
+    margin-left: 66px;
+    width: 420px;
+    height: 420px;
   }
   .calendar__right__overlay {
-    top: 50px;
-    right: 0;
-    width: 100%;
-    height: auto;
+    top: 60px;
   }
   .calendar__right__overlay__img {
-    width: 530px;
-    height: auto;
+    width: 550px;
   }
 
   .uos-container {
@@ -977,6 +1029,16 @@ body {
   }
   .uos__content {
     margin-top: 50px;
+  }
+
+  .footer__container__top {
+    padding: 40px 30px 0 30px;
+  }
+  .footer__container__top__title {
+    min-width: 320px;
+  }
+  .footer__container__bottom {
+    padding: 0 30px 20px 30px;
   }
 }
 
@@ -1014,19 +1076,40 @@ body {
   .classroom__top__right__iconDiv {
     padding: 30px 31px;
   }
+
+  .calendar {
+    padding: 75px 0;
+  }
+  .calendar__right__base {
+    margin-left: 50px;
+    width: 400px;
+    height: 400px;
+  }
+  .calendar__right__overlay {
+    top: 60px;
+  }
+  .calendar__right__overlay__img {
+    width: 500px;
+  }
+
+  .footer__container__top__title {
+    min-width: 260px;
+  }
 }
 
 @media (max-width: 1023px) {
   html {
     font-size: 8px;
   }
-  .container {
+  .container,
+  .container-12 {
     padding: 0 40px;
   }
   .primary-btn {
     padding: 15px 30px;
   }
-  .header__nav__logo__img {
+  .header__nav__logo__img,
+  .footer__container__bottom__group {
     width: 210px;
     height: auto;
   }
@@ -1163,21 +1246,67 @@ body {
     line-height: 25px;
   }
 
+  .calendar {
+    padding: 70px 0;
+    flex-direction: column;
+  }
+  .calendar__left {
+    width: 100%;
+    padding: 0;
+  }
+  .calendar__right {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .calendar__right__base {
+    margin-left: 0;
+    width: 490px;
+    height: 490px;
+  }
+  .calendar__right__overlay {
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .calendar__right__overlay__img {
+    width: 633px;
+  }
+
   .uos-container {
     padding: 70px 40px;
   }
   .uos__content {
     margin-top: 45px;
   }
-}
-
-@media (max-width: 949px) {
-  .calendar__right__container__base {
-    margin-top: -10px;
-    padding: 0 40px;
+  
+  .testimonial {
+    padding: 70px 0 90px 0;
   }
-  .calendar__right__container__overlay {
-    padding: 60px 20px 0 10px;
+  .testimonial__para {
+    margin: 25px 70px 70px 70px;
+    padding: 0 25px;
+  }
+  .testimonial__container {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .testimonial__container__card {
+    max-width: 325px;
+  }
+  .testimonial__faq {
+    margin-top: 90px;
+  }
+
+  .footer__container__top {
+    padding: 30px 25px 0 25px;
+  }
+  .footer__container__top__title {
+    min-width: 260px;
+  }
+  .footer__container__bottom {
+    padding: 0 25px 15px 25px;
   }
 }
 
@@ -1188,7 +1317,8 @@ body {
 }
 
 @media (max-width: 767px) {
-  .container {
+  .container,
+  .container-12 {
     padding: 0 25px;
   }
   .primary-btn {
@@ -1197,7 +1327,8 @@ body {
   .course-card {
     margin: 0 auto;
   }
-  .header__nav__logo__img {
+  .header__nav__logo__img,
+  .footer__container__bottom__group {
     width: 180px;
   }
   .container-half {
@@ -1328,6 +1459,22 @@ body {
     align-items: center;
   }
 
+  .calendar {
+    padding: 60px 0;
+  }
+  .calendar__right__base {
+    width: 400px;
+    height: 400px;
+  }
+  .calendar__right__overlay {
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .calendar__right__overlay__img {
+    width: 500px;
+  }
+
   .uos-container {
     padding: 60px 25px;
   }
@@ -1354,16 +1501,60 @@ body {
   .uos__content {
     margin-top: 30px;
   }
+
+  .testimonial {
+    padding: 60px 0 80px 0;
+  }
+  .testimonial__para {
+    margin: 20px 45px 45px 45px;
+    padding: 0 20px;
+  }
+  .testimonial__container {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .testimonial__container__card {
+    max-width: 100%;
+  }
+  .testimonial__faq {
+    margin-top: 60px;
+  }
+
+  .footer__container__top {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .calendar__right__base {
+    width: 360px;
+    height: 360px;
+  }
+  .calendar__right__overlay {
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .calendar__right__overlay__img {
+    width: 390px;
+  }
+
+  .footer__container__bottom__icons {
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 479px) {
-  .container {
+  .container,
+  .container-12 {
     padding: 0 15px;
   }
   .primary-btn {
     padding: 12px 18px;
   }
-  .header__nav__logo__img {
+  .header__nav__logo__img,
+  .footer__container__bottom__group {
     width: 150px;
   }
   .hero {
@@ -1407,13 +1598,60 @@ body {
     bottom: -10px;
   }
 
+  .calendar {
+    padding: 50px 0;
+  }
+  .calendar__right__base {
+    width: 315px;
+    height: 315px;
+  }
+  .calendar__right__overlay {
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .calendar__right__overlay__img {
+    width: 340px;
+  }
+
   .uos-container {
     padding: 50px 15px;
   }
   .uos__content {
     margin-top: 25px;
   }
+  .round-arrow-img {
+    display: none;
+  }
   .course-card {
     width: 100%;
+  }
+
+  .testimonial {
+    padding: 50px 0 60px 0;
+  }
+  .testimonial__para {
+    margin: 15px 15px 30px 15px;
+    padding: 0 10px;
+  }
+  .testimonial__container__card {
+    max-width: 100%;
+  }
+  .testimonial__faq {
+    margin-top: 45px;
+  }
+
+  .footer__container__top {
+    padding: 20px 10px 0 10px;
+  }
+  .footer__container__bottom {
+    padding: 0 10px 10px 10px;
+  }
+  .footer__container__top__title {
+    min-width: 100%;
+    text-align: center;
+  }
+  .footer__container__top__content {
+    flex-direction: column;
   }
 }

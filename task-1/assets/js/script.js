@@ -20,16 +20,30 @@ function showSlides() {
 
 $(document).ready(function () {
     $(".accordion").click(function () {
-        var $this = $(this);
-        console.log($this);
-        var $answer = $this.parent().siblings('.testimonial__faq__content__box__answer');
+        let $this = $(this);
+        let $question = $this.parent();
+        let $questionBox = $this.parent().parent();
+
+        let $answer = $this.parent().siblings('.testimonial__faq__content__box__answer');
 
         $answer.toggle();
 
         if ($answer.is(':visible')) {
-            $this.addClass('accordion-open').removeClass('accordion-close');
+            $this.addClass('accordion-open');
+            $question
+                .addClass('testimonial__faq__content__box__question-open')
+                .removeClass('testimonial__faq__content__box__question');
+            $questionBox
+                .addClass('testimonial__faq__content__box-open')
+                .removeClass('testimonial__faq__content__box');
         } else {
-            $this.addClass('accordion-close').removeClass('accordion-open');
+            $this.removeClass('accordion-open');
+            $question
+                .removeClass('testimonial__faq__content__box__question-open')
+                .addClass('testimonial__faq__content__box__question');
+            $questionBox
+                .removeClass('testimonial__faq__content__box-open')
+                .addClass('testimonial__faq__content__box');
         }
     });
 });
