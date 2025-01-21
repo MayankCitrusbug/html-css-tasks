@@ -1,0 +1,120 @@
+:root {
+  --mono-bg: rgba(247, 249, 252, 1);
+  --mono-body: rgba(63, 75, 87, 1);
+  --mono-display: rgba(35, 45, 56, 1);
+  --mono-label: rgba(87, 100, 115, 1);
+  --mono-line: rgba(219, 226, 233, 1);
+  --mono-white: rgba(255, 255, 255, 1);
+  --mono-input: rgba(239, 243, 246, 1);
+  --primary-default: rgba(11, 144, 123, 1);
+  --secondary-default: rgba(31, 108, 191, 1);
+  --warning-bg: rgba(255, 248, 233, 1);
+  --warning-light: rgba(255, 235, 191, 1);
+  --danger-default: rgba(202, 40, 103, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+html {
+  font-size: 10px;
+}
+body {
+  background: var(--mono-bg);
+  color: #173b58;
+  font-family: "Inter";
+}
+
+/* utility classes */
+
+.inter-13-regular {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.1px;
+}
+.inter-13-bold {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.1px;
+}
+.inter-15-bold {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.relative {
+  position: relative;
+}
+
+/* header */
+
+.header__nav {
+  display: flex;
+  padding: 6px 0;
+  align-items: center;
+  gap: 24px;
+}
+.header__nav__logo {
+  padding: 4px 60px 4px 0;
+}
+.header__nav__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+.header__nav__menu__select {
+  padding: 9px 12px;
+  background: rgba(9, 115, 98, 0.04);
+  border: none;
+  color: var(--mono-body);
+}
+.header__nav__menu__options {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  gap: 24px;
+}
+.header__nav__menu__options__btn {
+  border: none;
+  background: var(--mono-bg);
+}
+.header__nav__menu__options__btnUser {
+  border: none;
+  color: var(--mono-body);
+  background: var(--mono-line);
+  padding: 9px 11px;
+  border-radius: 50%;
+}
+.header__nav__menu__options__btn__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.notification__count {
+  position: absolute;
+  top: 0;
+  left: 11px;
+  background: var(--danger-default);
+  color: var(--mono-white);
+  border-radius: 50%;
+  padding: 0 5px;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-align: center;
+}
