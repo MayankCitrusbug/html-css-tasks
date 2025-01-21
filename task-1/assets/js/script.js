@@ -26,24 +26,24 @@ $(document).ready(function () {
 
         let $answer = $this.parent().siblings('.testimonial__faq__content__box__answer');
 
-        $answer.toggle();
-
-        if ($answer.is(':visible')) {
-            $this.addClass('accordion-open');
-            $question
-                .addClass('testimonial__faq__content__box__question-open')
-                .removeClass('testimonial__faq__content__box__question');
-            $questionBox
-                .addClass('testimonial__faq__content__box-open')
-                .removeClass('testimonial__faq__content__box');
-        } else {
-            $this.removeClass('accordion-open');
-            $question
-                .removeClass('testimonial__faq__content__box__question-open')
-                .addClass('testimonial__faq__content__box__question');
-            $questionBox
-                .removeClass('testimonial__faq__content__box-open')
-                .addClass('testimonial__faq__content__box');
-        }
+        $answer.slideToggle(200, function () {
+            if ($answer.is(':visible')) {
+                $this.addClass('accordion-open');
+                $question
+                    .addClass('testimonial__faq__content__box__question-open')
+                    .removeClass('testimonial__faq__content__box__question');
+                $questionBox
+                    .addClass('testimonial__faq__content__box-open')
+                    .removeClass('testimonial__faq__content__box');
+            } else {
+                $this.removeClass('accordion-open');
+                $question
+                    .removeClass('testimonial__faq__content__box__question-open')
+                    .addClass('testimonial__faq__content__box__question');
+                $questionBox
+                    .removeClass('testimonial__faq__content__box-open')
+                    .addClass('testimonial__faq__content__box');
+            }
+        });
     });
 });
