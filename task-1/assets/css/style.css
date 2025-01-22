@@ -57,11 +57,6 @@ body {
   margin: 0 auto;
   padding: 0 100px;
 }
-.container-12 {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 120px;
-}
 .container-half {
   width: 50%;
 }
@@ -85,7 +80,6 @@ body {
   background: var(--white);
   padding: 14px 19px;
   border-radius: 8px;
-  flex-shrink: 0;
   box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07);
 }
 .course-card__img {
@@ -355,6 +349,9 @@ body {
 .classroom-heading {
   text-align: center;
 }
+.classroom__top__courseCard {
+  flex-shrink: 0;
+}
 .course-card__footer__btn-dot {
   border: none;
   padding: 5px 13px;
@@ -386,13 +383,17 @@ body {
   object-fit: cover;
 }
 .classroom__top__right__iconDiv {
-  padding: 35px 36px;
+  padding: 35px 37px;
   border-radius: 74px;
   position: absolute;
   background: var(--blue);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.classroom__top__right__iconDiv__img {
+  width: 19px;
+  height: auto;
 }
 .classroom__bottom {
   margin-top: 30px;
@@ -423,7 +424,6 @@ body {
 }
 .about__text {
   margin-top: 80px;
-  padding: 0 21px;
 }
 .about__text__para {
   font-size: 2rem;
@@ -519,20 +519,20 @@ body {
   text-align: center;
 }
 .underline-img-article {
-  left: 40px;
+  left: 50%;
   bottom: -12px;
   width: 235px;
   height: auto;
+  transform: translate(-50%, 0);
 }
 .article__container {
   margin-top: 60px;
   display: flex;
-  justify-content: center;
   align-items: stretch;
   gap: 24px;
 }
 .article__container__card {
-  width: 384px;
+  width: calc(100% / 3);
 }
 .article__container__card__img {
   width: 100%;
@@ -565,7 +565,7 @@ body {
   margin: 0 auto;
 }
 .uke__left {
-  padding: 32px 0 0 120px;
+  padding: 32px 0 0 100px;
 }
 .uke__left__title {
   font-size: 2.2rem;
@@ -574,7 +574,7 @@ body {
 }
 .uke__left__title__underline {
   left: -20px;
-  bottom: -15px;
+  bottom: -12px;
   width: 235px;
   height: auto;
 }
@@ -656,18 +656,20 @@ body {
   margin-top: 40px;
 }
 .calendar__right__base {
-  margin-left: 75px;
-  width: 490px;
-  height: 490px;
+  width: 480px;
+  height: 480px;
   background: var(--gray);
   border-radius: 50%;
+  margin: 0 auto;
 }
 .calendar__right__overlay {
-  left: 0;
-  top: 70px;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .calendar__right__overlay__img {
-  width: 633px;
+  width: 100%;
   height: auto;
 }
 
@@ -676,11 +678,7 @@ body {
 .uos {
   width: 100%;
   background: var(--gray-section);
-}
-.uos-container {
-  padding: 80px 78px 80px 120px;
-  max-width: 1440px;
-  margin: 0 auto;
+  padding: 80px 0;
 }
 .uos__heading {
   display: flex;
@@ -714,29 +712,39 @@ body {
 .uos__content {
   margin-top: 66px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   gap: 30px;
+}
+.course-card-uos {
+  width: calc((100% - 90px) / 4);
 }
 .course-card__footer__user__profiles {
   position: relative;
-  width: 60px;
+  width: 56px;
   z-index: 2;
 }
-.course-card__footer__user__profile2 {
+.course-card__footer__user__profiles__img1,
+.course-card__footer__user__profiles__img2,
+.course-card__footer__user__profiles__img3 {
+  width: 40px;
+  height: auto;
+}
+.course-card__footer__user__profiles__img2 {
   position: absolute;
-  left: 10px;
+  left: 8px;
+  top: 0;
   z-index: -1;
 }
-.course-card__footer__user__profile3 {
+.course-card__footer__user__profiles__img3 {
   position: absolute;
-  left: 20px;
+  top: 0;
+  left: 16px;
   z-index: -2;
 }
 .course-card__footer__btn {
   border: none;
-  padding: 3px 3px;
+  padding: 3px 4px;
   border-radius: 70px;
   background: rgba(237, 242, 247, 1);
 }
@@ -763,17 +771,14 @@ body {
 }
 .testimonial__container {
   display: flex;
-  justify-content: center;
   gap: 52px;
 }
 .testimonial__container__card {
   padding: 40px 35px;
-  margin: 0 auto;
   text-align: center;
   border: 1px solid rgba(222, 222, 222, 1);
   border-radius: 5px;
   box-shadow: 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.0283);
-  max-width: 366px;
 }
 .testimonial__container__card__profile {
   margin-top: 30px;
@@ -819,19 +824,19 @@ body {
   border-bottom: 1px solid #dedede;
 }
 .testimonial__faq__content__box__question {
-  padding: 23px 28px 22px 25px;
+  padding: 18px 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.1px;
   color: rgba(37, 43, 66, 1);
 }
-
 .testimonial__faq__content__box__question-open {
-  padding: 18px 28px 29px 29px;
+  padding: 18px 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -842,9 +847,8 @@ body {
   color: rgba(24, 60, 89, 1);
   border-left: 3px solid var(--orange);
 }
-
 .testimonial__faq__content__box__answer {
-  padding: 0 48px 35px 35px;
+  padding: 0 47px 35px 35px;
   display: none;
 }
 .testimonial__faq__content__box__answer__p {
@@ -855,25 +859,19 @@ body {
   color: rgba(0, 0, 0, 1);
 }
 .accordion {
-  padding: 11px 12px;
+  padding: 7px 12px;
   border-radius: 30px;
   background: var(--white);
   border: 1px solid rgba(211, 211, 211, 1);
 }
 .accordion-open {
-  padding: 12px 13px;
+  padding: 9px 13px;
   background: var(--orange);
   border: none;
   transform: rotate(-90deg);
 }
-.accordion-close {
-  padding: 11px 12px;
-  background: var(--white);
-  border: 1px solid rgba(211, 211, 211, 1);
-  transform: rotate(0deg);
-}
 .accordion-icon {
-  width: 7px;
+  width: 6px;
   height: 9px;
 }
 
@@ -886,14 +884,14 @@ body {
   color: white;
 }
 .footer__container__top {
-  padding: 40px 47px 0 60px;
+  padding: 40px 60px 0 60px;
   display: flex;
   gap: 19px;
   align-items: center;
   justify-content: center;
 }
 .footer__container__top__title {
-  min-width: 385px;
+  max-width: 22%;
 }
 .footer__container__top__content {
   display: flex;
@@ -921,7 +919,7 @@ body {
 }
 .footer__container__top__content__menu__options__option {
   font-family: DM Sans;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 500;
   line-height: 44px;
   letter-spacing: 0.02em;
@@ -975,16 +973,17 @@ body {
   html {
     font-size: 9px;
   }
-  .container,
-  .container-12 {
+  .container {
     padding: 0 50px;
   }
   .hero__right__imgDiv {
     margin: -90px -50px 20px 0;
   }
   .hero__right__review-card {
-    bottom: 3%;
     right: 53%;
+  }
+  .hero__left__inputDiv__overlay {
+    padding: 18px 40px;
   }
   .hero__right__users-card {
     right: 0%;
@@ -992,11 +991,11 @@ body {
   }
 
   .classroom {
-    padding: 100px 0;
+    padding: 80px 0;
   }
 
   .article {
-    padding: 80px 0 70px 0;
+    padding: 80px 0;
   }
 
   .uke__left {
@@ -1010,33 +1009,28 @@ body {
   .calendar {
     padding: 80px 0;
   }
-  .calendar__right__base {
-    margin-left: 66px;
-    width: 420px;
-    height: 420px;
-  }
-  .calendar__right__overlay {
-    top: 60px;
-  }
-  .calendar__right__overlay__img {
-    width: 550px;
-  }
 
   .uos-container {
     padding: 80px 50px;
   }
   .uos__content {
     margin-top: 50px;
+    gap: 15px;
+  }
+  .course-card-uos {
+    width: calc((100% - 45px) / 4);
+  }
+
+  .testimonial__para {
+    margin: 30px 0 80px 0;
+    padding: 0;
   }
 
   .footer__container__top {
-    padding: 40px 30px 0 30px;
-  }
-  .footer__container__top__title {
-    min-width: 320px;
+    padding: 40px 50px 0 50px;
   }
   .footer__container__bottom {
-    padding: 0 30px 20px 30px;
+    padding: 0 50px 20px 50px;
   }
 }
 
@@ -1056,8 +1050,6 @@ body {
     padding: 20px;
   }
   .hero__right__review-card {
-    bottom: 3%;
-    right: 53%;
     width: 280px;
     padding: 20px 15px 12px 15px;
   }
@@ -1066,7 +1058,7 @@ body {
   }
 
   .classroom {
-    padding: 90px 0;
+    padding: 70px 0;
   }
   .classroom__top {
     margin-top: 50px;
@@ -1076,32 +1068,39 @@ body {
   }
 
   .calendar {
-    padding: 75px 0;
-  }
-  .calendar__right__base {
-    margin-left: 50px;
-    width: 400px;
-    height: 400px;
-  }
-  .calendar__right__overlay {
-    top: 60px;
-  }
-  .calendar__right__overlay__img {
-    width: 500px;
+    padding: 70px 0;
   }
 
+  .uos__content {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .course-card-uos {
+    width: calc((100% - 30px) / 2);
+  }
+
+  .testimonial__container {
+    gap: 30px;
+  }
+  .testimonial__container__card {
+    padding: 30px 25px;
+  }
+  .testimonial__faq {
+    margin-top: 90px;
+  }
+  .footer__container__top {
+    flex-direction: column;
+    gap: 25px;
+  }
   .footer__container__top__title {
-    min-width: 260px;
+    max-width: 100%;
+    text-align: center;
   }
 }
 
 @media (max-width: 1023px) {
   html {
     font-size: 8px;
-  }
-  .container,
-  .container-12 {
-    padding: 0 40px;
   }
   .primary-btn {
     padding: 15px 30px;
@@ -1112,8 +1111,10 @@ body {
     height: auto;
   }
   .underline-img {
-    width: 175px;
+    width: 170px;
+    bottom: -10px;
   }
+
   .hero__left__subtitle {
     text-wrap: wrap;
   }
@@ -1153,8 +1154,7 @@ body {
     padding: 15px;
   }
   .hero__right__review-card {
-    bottom: 3%;
-    right: 30%;
+    right: 0;
     width: 260px;
     padding: 8px 15px 8px 10px;
   }
@@ -1180,14 +1180,14 @@ body {
   }
 
   .classroom {
-    padding: 80px 0;
+    padding: 65px 0;
   }
   .classroom__top {
     margin-top: 45px;
     gap: 25px;
   }
   .classroom__top__right__iconDiv {
-    padding: 25px 28px;
+    padding: 27px 28px;
   }
   .classroom__bottom {
     margin-top: 25px;
@@ -1195,29 +1195,24 @@ body {
   }
 
   .about {
-    margin-top: 80px;
+    margin-top: 65px;
   }
   .about__text {
-    margin-top: 65px;
+    margin-top: 55px;
   }
   .about__founders {
     margin-top: 45px;
   }
 
   .article {
-    padding: 70px 0 60px 0;
+    padding: 65px 0;
   }
   .underline-img-article {
-    left: 30px;
-    bottom: -10px;
-    width: 180px;
+    bottom: -8px;
+    width: 190px;
   }
   .article__container {
     margin-top: 45px;
-    flex-wrap: wrap;
-  }
-  .article__container__card {
-    width: 320px;
   }
   .article__container__card__title {
     margin-top: 10px;
@@ -1233,7 +1228,6 @@ body {
     margin-top: 50px;
     gap: 18px;
   }
-
   .uke__left__title__underline {
     left: -15px;
     bottom: -10px;
@@ -1245,98 +1239,176 @@ body {
   }
 
   .calendar {
-    padding: 70px 0;
+    padding: 65px 0;
     flex-direction: column;
   }
   .calendar__left {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0;
   }
   .calendar__right {
     margin-top: 30px;
     width: 100%;
-    display: flex;
-    justify-content: center;
   }
   .calendar__right__base {
-    margin-left: 0;
-    width: 490px;
-    height: 490px;
-  }
-  .calendar__right__overlay {
-    top: 70px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .calendar__right__overlay__img {
-    width: 633px;
+    width: 610px;
+    height: 610px;
   }
 
-  .uos-container {
-    padding: 70px 40px;
-  }
   .uos__content {
     margin-top: 45px;
   }
-  
+
   .testimonial {
-    padding: 70px 0 90px 0;
+    padding: 65px 0;
   }
   .testimonial__para {
-    margin: 25px 70px 70px 70px;
-    padding: 0 25px;
+    margin: 25px 0 50px 0;
   }
   .testimonial__container {
-    flex-wrap: wrap;
-    gap: 36px;
+    gap: 10px;
   }
   .testimonial__container__card {
-    max-width: 325px;
+    padding: 24px 18px;
   }
   .testimonial__faq {
-    margin-top: 90px;
+    margin-top: 70px;
+  }
+  .testimonial__faq__content__box__question {
+    padding: 16px 26px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .testimonial__faq__content__box__question-open {
+    padding: 16px 26px;
+  }
+  .testimonial__faq__content__box__answer {
+    padding: 0 40px 30px 30px;
+  }
+  .testimonial__faq__content__box__answer__p {
+    font-size: 15px;
+    line-height: 22px;
   }
 
   .footer__container__top {
-    padding: 30px 25px 0 25px;
-  }
-  .footer__container__top__title {
-    min-width: 260px;
+    padding: 30px 40px 0 40px;
   }
   .footer__container__bottom {
-    padding: 0 25px 15px 25px;
-  }
-}
-
-@media (max-width: 849px) {
-  .hero__right__review-card {
-    right: 0%;
+    padding: 0 40px 15px 40px;
   }
 }
 
 @media (max-width: 767px) {
-  .container,
-  .container-12 {
+  html {
+    font-size: 7px;
+  }
+  .container {
     padding: 0 25px;
   }
   .primary-btn {
     padding: 12px 24px;
-  }
-  .course-card {
-    width: 100%;
-  }
-  .header__nav__logo__img,
-  .footer__container__bottom__group {
-    width: 180px;
+    font-size: 2rem;
   }
   .container-half {
     width: 100%;
   }
 
+  .header__nav__logo__img,
+  .footer__container__bottom__group {
+    width: 180px;
+  }
   .header__nav {
     padding: 25px 0;
   }
 
+  .hero {
+    flex-direction: column-reverse;
+  }
+  .hero__left {
+    padding: 40px 0;
+  }
+  .hero__left__heading,
+  .hero__left__subtitle,
+  .hero__left__para {
+    text-align: center;
+  }
+  .hero__left__inputDiv {
+    margin: 20px auto 10px auto;
+    width: 100%;
+  }
+  .hero__left__inputDiv__input {
+    width: 90%;
+    padding: 15px 118px 15px 20px;
+  }
+  .hero__left__inputDiv__overlay {
+    padding: 10px 30px;
+    right: 0;
+  }
+  .hero__left__signupDiv {
+    justify-content: center;
+  }
+  .hero__right {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .hero__right__imgDiv {
+    margin: -50px 0 0 0;
+  }
+  .hero__right__imgDiv__img {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+  }
+  .hero__right__users-card {
+    right: 0;
+    position: relative;
+    width: 100%;
+    padding: 24px;
+  }
+  .hero__right__review-card {
+    position: static;
+    width: 100%;
+    padding: 28px 20px 16px 20px;
+  }
+  .hero__right__review-card__main__user__details__para,
+  .hero__right__users-card__para {
+    font-size: 2rem;
+  }
+
+  .classroom {
+    padding: 60px 0;
+  }
+  .classroom__top {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+  .classroom__top__courseCard {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .classroom__bottom {
+    padding: 32px 40px;
+  }
+  .classroom__bottom__para {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+
+  .about {
+    margin-top: 60px;
+  }
+  .about__founders {
+    margin-top: 40px;
+  }
   .about__founders__card {
     flex-direction: column;
   }
@@ -1358,81 +1430,22 @@ body {
   .about__founders__card__details__address__icon {
     width: 22px;
   }
-
-  .hero__left__inputDiv {
-    width: 50%;
-    margin: 20px auto 10px auto;
-  }
-  .hero {
-    padding: 0 30px;
-    flex-direction: column-reverse;
-  }
-  .hero__right {
-    position: static;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-  }
-  .hero__right__imgDiv {
-    margin: -50px 0 0 0;
-  }
-  .hero__right__imgDiv__img {
-    width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-  }
-  .hero__right__review-card {
-    position: static;
-    padding: 10px;
-  }
-  .hero__left {
-    padding: 40px 0;
-  }
-  .hero__left__heading,
-  .hero__left__subtitle,
-  .hero__left__para {
-    text-align: center;
-  }
-  .hero__left__inputDiv {
-    width: 100%;
-  }
-  .hero__left__inputDiv__input {
-    width: 90%;
-  }
-  .hero__left__inputDiv__input {
-    padding: 15px 130px 15px 20px;
-  }
-  .hero__left__inputDiv__overlay {
-    right: 0;
-  }
-  .hero__left__signupDiv {
-    justify-content: center;
-  }
-  .hero__right__users-card {
-    right: 0;
-    position: relative;
-  }
-
-  .classroom {
-    padding: 70px 0;
-  }
-  .classroom__top {
-    margin-top: 40px;
-    flex-direction: column;
-  }
-  .classroom__bottom {
-    padding: 32px 40px;
+  .about__founders__card__details__header__text__subtitle,
+  .about__founders__card__details__address__text,
+  .about__founders__card__details__intro {
+    font-size: 2rem;
   }
 
   .article {
-    padding: 60px 0 50px 0;
+    padding: 60px 0;
   }
   .article__container {
+    margin-top: 40px;
     gap: 35px;
+    flex-direction: column;
+  }
+  .underline-img-article {
+    width: 160px;
   }
   .article__container__card {
     width: 100%;
@@ -1461,21 +1474,10 @@ body {
     padding: 60px 0;
   }
   .calendar__right__base {
-    width: 400px;
-    height: 400px;
-  }
-  .calendar__right__overlay {
-    top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .calendar__right__overlay__img {
     width: 500px;
+    height: 500px;
   }
 
-  .uos-container {
-    padding: 60px 25px;
-  }
   .round-arrow-img {
     top: 13px;
     left: 12px;
@@ -1485,7 +1487,7 @@ body {
     flex-direction: column;
   }
   .uos__heading__arrows {
-    margin-top: 18px;
+    margin-top: 16px;
     margin-bottom: 0;
     justify-content: flex-end;
   }
@@ -1498,14 +1500,17 @@ body {
   }
   .uos__content {
     margin-top: 30px;
+    gap: 15px;
+  }
+  .course-card-uos {
+    width: calc((100% - 15px) / 2);
   }
 
   .testimonial {
-    padding: 60px 0 80px 0;
+    padding: 60px 0;
   }
   .testimonial__para {
-    margin: 20px 45px 45px 45px;
-    padding: 0 20px;
+    margin: 20px 0 40px 0;
   }
   .testimonial__container {
     flex-wrap: wrap;
@@ -1515,40 +1520,80 @@ body {
     max-width: 100%;
   }
   .testimonial__faq {
-    margin-top: 60px;
+    margin-top: 45px;
+  }
+  .testimonial__faq__content__box__question {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  .testimonial__faq__content__box__question-open {
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+  .testimonial__faq__content__box__answer {
+    padding: 0 30px 2px 20px;
+    font-size: 14px;
+  }
+  .testimonial__faq__content__box__answer__p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .accordion {
+    padding: 6px 10px;
   }
 
   .footer__container__top {
-    flex-direction: column;
+    padding: 20px 25px 0 25px;
   }
-  .footer__container__top__title {
-    min-width: auto;
+  .footer__container__bottom {
+    padding: 0 25px 15px 25px;
+  }
+  .footer__container__top__content__menu__heading,
+  .footer__container__top__content__menu__options__option {
+    font-size: 2rem;
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 599px) {
+  .hero__left__inputDiv__input {
+    width: 100%;
+    padding: 15px 20px;
+  }
+  .hero__left__inputDiv__overlay {
+    position: static;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto 0 auto;
+  }
+
+  .classroom__top__right__iconDiv {
+    padding: 20px 21px;
+  }
 
   .calendar__right__base {
-    width: 360px;
-    height: 360px;
-  }
-  .calendar__right__overlay {
-    top: 65px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .calendar__right__overlay__img {
-    width: 390px;
+    width: 400px;
+    height: 400px;
   }
 
+  .course-card-uos {
+    width: calc(100%);
+  }
+
+  .footer__container__top__content {
+    flex-direction: column;
+  }
   .footer__container__bottom__icons {
     margin: 0 auto;
+  }
+  .footer__container__bottom__icons__link__img {
+    width: 21px;
+    height: 21px;
   }
 }
 
 @media (max-width: 479px) {
-  .container,
-  .container-12 {
+  .container {
     padding: 0 15px;
   }
   .primary-btn {
@@ -1556,10 +1601,7 @@ body {
   }
   .header__nav__logo__img,
   .footer__container__bottom__group {
-    width: 150px;
-  }
-  .hero {
-    padding: 0 20px;
+    width: 140px;
   }
   .hero__left__subtitle {
     text-wrap: wrap;
@@ -1575,20 +1617,47 @@ body {
   }
 
   .classroom {
-    padding: 60px 0;
+    padding: 50px 0;
   }
   .classroom__top {
-    margin-top: 35px;
+    margin-top: 30px;
   }
   .classroom__bottom {
-    padding: 24px 32px;
+    padding: 24px 30px;
+  }
+
+  .about {
+    margin-top: 50px;
+  }
+  .about__founders {
+    margin-top: 30px;
+  }
+  .about__founders__card__imgsDiv {
+    padding: 20px;
+    width: 260px;
+  }
+  .about__founders__card__imgsDiv__gradient {
+    width: 22px;
+    height: auto;
+}
+  .about__founders__card__imgsDiv__founder {
+    width: 220px;
+    margin-top: 10px;
+  }
+
+  .article {
+    padding: 50px 0;
+  }
+  .article__container {
+    margin-top: 30px;
+    gap: 20px;
   }
 
   .uke__left {
     padding: 15px;
   }
   .uke__left__content {
-    margin-top: 40px;
+    margin-top: 35px;
     gap: 15px;
   }
   .uke__left__content__subtitle {
@@ -1602,58 +1671,50 @@ body {
   .calendar {
     padding: 50px 0;
   }
+  .calendar__right {
+    margin-top: 25px;
+  }
   .calendar__right__base {
-    width: 315px;
-    height: 315px;
-  }
-  .calendar__right__overlay {
-    top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .calendar__right__overlay__img {
-    width: 340px;
+    width: 320px;
+    height: 320px;
   }
 
-  .uos-container {
-    padding: 50px 15px;
-  }
   .uos__content {
     margin-top: 25px;
   }
   .round-arrow-img {
-    display: none;
+    top: 10px;
+    left: 0;
+    width: 60px;
   }
   .course-card {
     width: 100%;
   }
 
   .testimonial {
-    padding: 50px 0 60px 0;
+    padding: 50px 0;
   }
   .testimonial__para {
-    margin: 15px 15px 30px 15px;
-    padding: 0 10px;
+    margin: 15px 0px 30px 0px;
+  }
+  .testimonial__container {
+    gap: 15px;
   }
   .testimonial__container__card {
     max-width: 100%;
   }
+  .testimonial__faq__content {
+    margin-top: 30px;
+  }
   .testimonial__faq {
-    margin-top: 45px;
+    margin-top: 40px;
   }
 
   .footer__container__top {
-    padding: 20px 10px 0 10px;
+    padding: 20px 15px 0 15px;
+    gap: 20px;
   }
   .footer__container__bottom {
-    padding: 0 10px 10px 10px;
-  }
-  .footer__container__top__title {
-    min-width: 100%;
-    text-align: center;
-  }
-  .footer__container__top__content {
-    flex-direction: column;
-    max-width: fit-content;
+    padding: 0 15px 10px 15px;
   }
 }
