@@ -42,10 +42,146 @@
               />
               <span class="notification__count">2</span>
             </button>
-            <button class="header__nav__menu__options__btnUser inter-13-bold">CN</button>
+            <div class="header__nav__menu__options__user">
+              <button
+                class="header__nav__menu__options__user__btn inter-13-bold"
+              >
+                CN
+              </button>
+              <ul
+                class="header__nav__menu__options__user__options inter-13-regular"
+              >
+                <li class="header__nav__menu__options__user__options__li">
+                  <img
+                    class="header__nav__menu__options__user__options__li__img"
+                    src="./assets/images/my-account.svg"
+                    alt="Profile"
+                  />
+                  My Account
+                </li>
+                <li class="header__nav__menu__options__user__options__li">
+                  <img
+                    class="header__nav__menu__options__user__options__li__img"
+                    src="./assets/images/my-organization.svg"
+                    alt="organization logo"
+                  />
+                  My Organization
+                </li>
+                <li class="header__nav__menu__options__user__options__li">
+                  <img
+                    class="header__nav__menu__options__user__options__li__img"
+                    src="./assets/images/notifications.svg"
+                    alt="notification bell"
+                  />
+                  Notifications
+                </li>
+                <li class="header__nav__menu__options__user__options__li">
+                  <img
+                    class="header__nav__menu__options__user__options__li__img"
+                    src="./assets/images/logout-in-circle.svg"
+                    alt="logout"
+                  />
+                  Log Out
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
     </header>
+
+    <div class="content">
+      <!-- aside -->
+      <aside class="aside">
+        <button class="aside__booking-btn cursor-pointer">
+          <img class="aside__booking-btn__img aside-icon" src="./assets/images/new-booking.svg" alt="plus icon">
+          <span class="aside__booking-btn__text aside-label inter-15-bold">New Booking</span>
+        </button>
+        <ul class="aside__menu">
+          <li class="aside__menu__li cursor-pointer">
+            <img
+              class="aside__menu__li__img aside-icon"
+              src="./assets/images/booking-list.svg"
+              alt="list"
+            />
+            <span class="aside__menu__li__text aside-label inter-13-bold">
+              Booking List
+            </span>
+          </li>
+          <li class="aside__menu__li cursor-pointer">
+            <img
+              class="aside__menu__li__img aside-icon"
+              src="./assets/images/calandar.svg"
+              alt="calendar"
+            />
+            <span class="aside__menu__li__text aside-label inter-13-bold">
+              Calendar
+            </span>
+          </li>
+          <li class="aside__menu__li cursor-pointer">
+            <img
+              class="aside__menu__li__img aside-icon"
+              src="./assets/images/user-management.svg"
+              alt="user icon"
+            />
+            <span class="aside__menu__li__text aside-label inter-13-bold">
+              User Management
+            </span>
+          </li>
+          <li class="aside__menu__li cursor-pointer">
+            <img
+              class="aside__menu__li__img aside-icon"
+              src="./assets/images/project-management.svg"
+              alt="manage icon"
+            />
+            <span class="aside__menu__li__text aside-label inter-13-bold">
+              Project Management
+            </span>
+          </li>
+          <div class="aside__menu__diff">
+            <li class="aside__menu__li cursor-pointer">
+              <img
+                class="aside__menu__li__img aside-icon"
+                src="./assets/images/site-details.svg"
+                alt="earth icon"
+              />
+              <span class="aside__menu__li__text aside-label inter-13-bold">
+                Site Details
+              </span>
+            </li>
+            <li class="aside__menu__li cursor-pointer">
+              <img
+                class="aside__menu__li__img aside-icon"
+                src="./assets/images/availability.svg"
+                alt="clock"
+              />
+              <span class="aside__menu__li__text aside-label inter-13-bold">
+                Availability
+              </span>
+            </li>
+          </div>
+        </ul>
+        <button class="aside__collapse-btn cursor-pointer">
+          <img class="aside__collapse-btn__img aside-icon" src="./assets/images/collapse.svg" alt="collapse icon" >
+          <span class="aside__collapse-btn__text aside-label aside-label inter-13-bold">
+            Collapse
+          </span>
+        </button>
+      </aside>
+
+      <main class="main">
+        <div class="main__banner">
+          <img class="main__banner__logo" src="./assets/images/m-logo.png" alt="main street tower logo">
+          <div class="main__banner__card">
+            <h6 class="main__banner__card__greeting">Welcome To</h6>
+            <h5 class="main__banner__card__place">Main Street Tower</h5>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- script -->
+    <script src="./assets/js/jquery-3.7.1.min.js.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
