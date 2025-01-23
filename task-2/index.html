@@ -1,187 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Voyage Control</title>
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
-    <link rel="stylesheet" href="./assets/fonts/inter/stylesheet.css" />
-    <link rel="stylesheet" href="./assets/fonts/poppins/stylesheet.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body>
-    <!-- header -->
-    <header class="container header">
-      <nav class="header__nav">
-        <a class="header__nav__logo" href="#">
-          <img
-            class="header__nav__logo__img"
-            src="./assets/images/logo.png"
-            alt="logo"
-          />
-        </a>
-        <div class="header__nav__menu">
-          <select class="header__nav__menu__select inter-13-bold" name="place">
-            <option value="main street tower - usa">
-              Main Street Tower - USA
-            </option>
-          </select>
-          <div class="header__nav__menu__options">
-            <button class="header__nav__menu__options__btn">
-              <img
-                class="header__nav__menu__options__btn__icon"
-                src="./assets/images/help.svg"
-                alt="help icon"
-              />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voyage Control</title>
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
+  <link rel="stylesheet" href="./assets/fonts/inter/stylesheet.css" />
+  <link rel="stylesheet" href="./assets/fonts/poppins/stylesheet.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <!-- header -->
+  <header class="container header">
+    <nav class="header__nav">
+      <a class="header__nav__logo" href="#">
+        <img class="header__nav__logo__img" src="./assets/images/logo.png" alt="logo" />
+      </a>
+      <div class="header__nav__menu">
+        <select class="header__nav__menu__select inter-13-bold" name="place">
+          <option value="main street tower - usa">
+            Main Street Tower - USA
+          </option>
+        </select>
+        <div class="header__nav__menu__options">
+          <button class="header__nav__menu__options__btn cursor-pointer">
+            <img class="header__nav__menu__options__btn__icon" src="./assets/images/help.svg" alt="help icon" />
+          </button>
+          <button class="header__nav__menu__options__btn relative cursor-pointer">
+            <img class="header__nav__menu__options__btn__icon" src="./assets/images/alram-bell.svg"
+              alt="notification icon" />
+            <span class="notification__count">2</span>
+          </button>
+          <div class="header__nav__menu__options__user">
+            <button class="header__nav__menu__options__user__btn inter-13-bold cursor-pointer">
+              CS
             </button>
-            <button class="header__nav__menu__options__btn relative">
-              <img
-                class="header__nav__menu__options__btn__icon"
-                src="./assets/images/alram-bell.svg"
-                alt="notification icon"
-              />
-              <span class="notification__count">2</span>
-            </button>
-            <div class="header__nav__menu__options__user">
-              <button
-                class="header__nav__menu__options__user__btn inter-13-bold"
-              >
-                CN
-              </button>
-              <ul
-                class="header__nav__menu__options__user__options inter-13-regular"
-              >
-                <li class="header__nav__menu__options__user__options__li">
-                  <img
-                    class="header__nav__menu__options__user__options__li__img"
-                    src="./assets/images/my-account.svg"
-                    alt="Profile"
-                  />
-                  My Account
-                </li>
-                <li class="header__nav__menu__options__user__options__li">
-                  <img
-                    class="header__nav__menu__options__user__options__li__img"
-                    src="./assets/images/my-organization.svg"
-                    alt="organization logo"
-                  />
-                  My Organization
-                </li>
-                <li class="header__nav__menu__options__user__options__li">
-                  <img
-                    class="header__nav__menu__options__user__options__li__img"
-                    src="./assets/images/notifications.svg"
-                    alt="notification bell"
-                  />
-                  Notifications
-                </li>
-                <li class="header__nav__menu__options__user__options__li">
-                  <img
-                    class="header__nav__menu__options__user__options__li__img"
-                    src="./assets/images/logout-in-circle.svg"
-                    alt="logout"
-                  />
-                  Log Out
-                </li>
-              </ul>
-            </div>
+            <ul class="header__nav__menu__options__user__options inter-13-regular">
+              <li class="header__nav__menu__options__user__options__li">
+                <img class="header__nav__menu__options__user__options__li__img" src="./assets/images/my-account.svg"
+                  alt="Profile" />
+                My Account
+              </li>
+              <li class="header__nav__menu__options__user__options__li">
+                <img class="header__nav__menu__options__user__options__li__img"
+                  src="./assets/images/my-organization.svg" alt="organization logo" />
+                My Organization
+              </li>
+              <li class="header__nav__menu__options__user__options__li">
+                <img class="header__nav__menu__options__user__options__li__img" src="./assets/images/notifications.svg"
+                  alt="notification bell" />
+                Notifications
+              </li>
+              <li class="header__nav__menu__options__user__options__li">
+                <img class="header__nav__menu__options__user__options__li__img"
+                  src="./assets/images/logout-in-circle.svg" alt="logout" />
+                Log Out
+              </li>
+            </ul>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
 
-    <div class="content">
-      <!-- aside -->
-      <aside class="aside">
+  <div class="content">
+    <!-- aside -->
+    <aside class="aside">
+      <ul class="aside__menu">
         <button class="aside__booking-btn cursor-pointer">
           <img class="aside__booking-btn__img aside-icon" src="./assets/images/new-booking.svg" alt="plus icon">
           <span class="aside__booking-btn__text aside-label inter-15-bold">New Booking</span>
         </button>
-        <ul class="aside__menu">
-          <li class="aside__menu__li cursor-pointer">
-            <img
-              class="aside__menu__li__img aside-icon"
-              src="./assets/images/booking-list.svg"
-              alt="list"
-            />
-            <span class="aside__menu__li__text aside-label inter-13-bold">
-              Booking List
-            </span>
-          </li>
-          <li class="aside__menu__li cursor-pointer">
-            <img
-              class="aside__menu__li__img aside-icon"
-              src="./assets/images/calandar.svg"
-              alt="calendar"
-            />
-            <span class="aside__menu__li__text aside-label inter-13-bold">
-              Calendar
-            </span>
-          </li>
-          <li class="aside__menu__li cursor-pointer">
-            <img
-              class="aside__menu__li__img aside-icon"
-              src="./assets/images/user-management.svg"
-              alt="user icon"
-            />
-            <span class="aside__menu__li__text aside-label inter-13-bold">
-              User Management
-            </span>
-          </li>
-          <li class="aside__menu__li cursor-pointer">
-            <img
-              class="aside__menu__li__img aside-icon"
-              src="./assets/images/project-management.svg"
-              alt="manage icon"
-            />
-            <span class="aside__menu__li__text aside-label inter-13-bold">
-              Project Management
-            </span>
-          </li>
-          <div class="aside__menu__diff">
-            <li class="aside__menu__li cursor-pointer">
-              <img
-                class="aside__menu__li__img aside-icon"
-                src="./assets/images/site-details.svg"
-                alt="earth icon"
-              />
-              <span class="aside__menu__li__text aside-label inter-13-bold">
-                Site Details
-              </span>
-            </li>
-            <li class="aside__menu__li cursor-pointer">
-              <img
-                class="aside__menu__li__img aside-icon"
-                src="./assets/images/availability.svg"
-                alt="clock"
-              />
-              <span class="aside__menu__li__text aside-label inter-13-bold">
-                Availability
-              </span>
-            </li>
-          </div>
-        </ul>
-        <button class="aside__collapse-btn cursor-pointer">
-          <img class="aside__collapse-btn__img aside-icon" src="./assets/images/collapse.svg" alt="collapse icon" >
-          <span class="aside__collapse-btn__text aside-label aside-label inter-13-bold">
-            Collapse
+        <li class="aside__menu__li cursor-pointer">
+          <img class="aside__menu__li__img aside-icon" src="./assets/images/booking-list.svg" alt="list" />
+          <span class="aside__menu__li__text aside-label inter-13-bold">
+            Booking List
           </span>
-        </button>
-      </aside>
+        </li>
+        <li class="aside__menu__li cursor-pointer">
+          <img class="aside__menu__li__img aside-icon" src="./assets/images/calandar.svg" alt="calendar" />
+          <span class="aside__menu__li__text aside-label inter-13-bold">
+            Calendar
+          </span>
+        </li>
+        <li class="aside__menu__li cursor-pointer">
+          <img class="aside__menu__li__img aside-icon" src="./assets/images/user-management.svg" alt="user icon" />
+          <span class="aside__menu__li__text aside-label inter-13-bold">
+            User Management
+          </span>
+        </li>
+        <li class="aside__menu__li cursor-pointer">
+          <img class="aside__menu__li__img aside-icon" src="./assets/images/project-management.svg" alt="manage icon" />
+          <span class="aside__menu__li__text aside-label inter-13-bold">
+            Project Management
+          </span>
+        </li>
+        <div class="aside__menu__diff">
+          <li class="aside__menu__li cursor-pointer">
+            <img class="aside__menu__li__img aside-icon" src="./assets/images/site-details.svg" alt="earth icon" />
+            <span class="aside__menu__li__text aside-label inter-13-bold">
+              Site Details
+            </span>
+          </li>
+          <li class="aside__menu__li cursor-pointer">
+            <img class="aside__menu__li__img aside-icon" src="./assets/images/availability.svg" alt="clock" />
+            <span class="aside__menu__li__text aside-label inter-13-bold">
+              Availability
+            </span>
+          </li>
+        </div>
+      </ul>
+      <button class="aside__collapse-btn cursor-pointer">
+        <img class="aside__collapse-btn__img aside-icon" src="./assets/images/collapse.svg" alt="collapse icon">
+        <span class="aside__collapse-btn__text aside-label aside-label inter-13-bold">
+          Collapse
+        </span>
+      </button>
+    </aside>
 
-      <main class="main">
-        <div class="main__banner">
-          <img class="main__banner__logo" src="./assets/images/m-logo.png" alt="main street tower logo">
-          <div class="main__banner__card">
-            <h6 class="main__banner__card__greeting">Welcome To</h6>
-            <h5 class="main__banner__card__place">Main Street Tower</h5>
+    <div class="site">
+      <div class="site__banner">
+        <img class="site__banner__logo" src="./assets/images/m-logo.png" alt="main street tower logo">
+        <div class="site__banner__card">
+          <h6 class="site__banner__card__greeting">Welcome To</h6>
+          <h2 class="site__banner__card__place">Main Street Tower</h2>
+        </div>
+      </div>
+      <section class="site__info">
+        <div class="site__info__box">
+          <img class="site__info__box__img" src="./assets/images/location.svg" alt="location icon">
+          <h4 class="site__info__box__text inter-15-bold">
+            555 Main St.<br />
+            Township, CA 90001
+          </h4>
+        </div>
+        <div class="site__info__box">
+          <img class="site__info__box__img" src="./assets/images/timing.svg" alt="clock icon">
+          <h4 class="site__info__box__text inter-15-bold">
+            7am - 5pm (PDT)
+          </h4>
+        </div>
+        <div class="site__info__box">
+          <img class="site__info__box__img" src="./assets/images/working-days.svg" alt="calendar icon">
+          <h4 class="site__info__box__text inter-15-bold">
+            Monday - Friday
+          </h4>
+        </div>
+      </section>
+      <hr class="site__hr">
+      <section class="site__contacts">
+        <h3 class="site__contacts__title">Site Contacts</h3>
+        <div class="site__contacts__container">
+          <div class="site__contacts__container__contact">
+            <div class="site__contacts__container__contact__card">
+              <div class="site__contacts__container__contact__card__user">
+                <p class="inter-13-regular">General Foreman</p>
+                <h4 class="site__contacts__container__contact__card__user__name inter-15-bold ">Tony Doe</h4>
+              </div>
+              <p class="site__contacts__container__contact__card__number  inter-13-regular">(510) 577-9987</p>
+              <p class="site__contacts__container__contact__card__email inter-13-regular">azeezhabeebomobolaji@gmail.com</p>
+            </div>
+            <div class="site__contacts__container__contact__card">
+              <div class="site__contacts__container__contact__card__user">
+                <p class="inter-13-regular">Building - Superintendent</p>
+                <h4 class="site__contacts__container__contact__card__user__name inter-15-bold">Adam Doe</h4>
+              </div>
+              <p class="site__contacts__container__contact__card__number inter-13-regular">(510) 577-9987</p>
+              <p class="site__contacts__container__contact__card__email inter-13-regular">azeezhabeebomobolaji@gmail.com</p>
+            </div>
+            <div class="site__contacts__container__contact__card">
+              <div class="site__contacts__container__contact__card__user">
+                <p class="inter-13-regular">Site - Superintendent</p>
+                <h4 class="site__contacts__container__contact__card__user__name inter-15-bold">Kyle Doe</h4>
+              </div>
+              <p class="site__contacts__container__contact__card__number inter-13-regular">(510) 577-9987</p>
+              <p class="site__contacts__container__contact__card__email inter-13-regular">azeezhabeebomobolaji@gmail.com</p>
+            </div>
+            <div class="site__contacts__container__contact__card">
+              <div class="site__contacts__container__contact__card__user">
+                <p class="inter-13-regular">Senior - Superintendent</p>
+                <h4 class="site__contacts__container__contact__card__user__name inter-15-bold">Brett Doe</h4>
+              </div>
+              <p class="site__contacts__container__contact__card__number inter-13-regular">(510) 577-9987</p>
+              <p class="site__contacts__container__contact__card__email inter-13-regular">azeezhabeebomobolaji@gmail.com</p>
+            </div>
+            <div class="site__contacts__container__contact__card">
+              <div class="site__contacts__container__contact__card__user">
+                <p class="inter-13-regular">Safety Manager</p>
+                <h4 class="site__contacts__container__contact__card__user__name inter-15-bold">Jack Doe</h4>
+              </div>
+              <p class="site__contacts__container__contact__card__number inter-13-regular">(510) 577-9987</p>
+              <p class="site__contacts__container__contact__card__email inter-13-regular">azeezhabeebomobolaji@gmail.com</p>
+            </div>
+            <div class="site__contacts__container__contact__card">
+              <div class="site__contacts__container__contact__card__user">
+                <p class="inter-13-regular">Safety Manager</p>
+                <h4 class="site__contacts__container__contact__card__user__name inter-15-bold">Jack Doe</h4>
+              </div>
+              <p class="site__contacts__container__contact__card__number inter-13-regular">(510) 577-9987</p>
+              <p class="site__contacts__container__contact__card__email inter-13-regular">azeezhabeebomobolaji@gmail.com</p>
+            </div>
+            <div class="site__contacts__container__contact__card">
+              <div class="site__contacts__container__contact__card__user">
+                <p class="inter-13-regular">Safety Manager</p>
+                <h4 class="site__contacts__container__contact__card__user__name inter-15-bold">Jack Doe</h4>
+              </div>
+              <p class="site__contacts__container__contact__card__number inter-13-regular">(510) 577-9987</p>
+              <p class="site__contacts__container__contact__card__email inter-13-regular">azeezhabeebomobolaji@gmail.com</p>
+            </div>
+          </div>
+          <div class="site__contacts__container__warning">
+            <p class="inter-13-bold">
+              This is where you can add in information to help your users manage their deliveries better.
+            </p>
+            <p class="inter-13-bold">
+              Site access times 9am - 5pm
+            </p>
+            <p class="inter-13-bold">
+              Only open on working days (Monday - Friday)
+            </p>
+            <p class="inter-13-bold">
+              Please make a delivery by selecting 'Schedule a Delivery' from the menu
+            </p>
           </div>
         </div>
-      </main>
+      </section>
     </div>
+  </div>
 
-    <!-- script -->
-    <script src="./assets/js/jquery-3.7.1.min.js.js"></script>
-    <script src="./assets/js/script.js"></script>
-  </body>
+  <!-- script -->
+  <script src="./assets/js/jquery-3.7.1.min.js.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
 </html>
