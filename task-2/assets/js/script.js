@@ -1,9 +1,18 @@
 $(document).ready(function () {
     $(".header__nav__menu__options__user__btn").click(function () {
         let $userOptions = $('.header__nav__menu__options__user__options');
-
         $userOptions.slideToggle(200);
     });
+
+    $(window).resize(function () {
+        let $aside = $('.aside');
+        if ($(window).width() > 767) {
+            $aside.css('display', 'flex');
+        } else {
+            $aside.css('display', 'none');
+        }
+    });
+
 
     $(".aside__collapse-btn").click(function () {
         let $collapseIcon = $('.aside__collapse-btn__img');
@@ -25,7 +34,7 @@ $(document).ready(function () {
         let $asideLabel = $('.aside-label');
         $aside.animate({ width: "toggle" }, 200, function () {
             if ($aside.is(':visible') && $asideLabel.is(':hidden')) {
-                console.log('label not visible');
+                $asideLabel.css('display', 'block')
             }
         });
     })
