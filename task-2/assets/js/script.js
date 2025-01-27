@@ -19,12 +19,15 @@ $(document).ready(function () {
         let isRotated = $collapseIcon.data('rotated');
 
         $(".aside-label").animate({ width: "toggle" }, 200, function () {
+            let $site = $('.site');
             if (isRotated) {
                 $collapseIcon.css('transform', 'rotate(0deg)');
                 $collapseIcon.data('rotated', false);
+                $site.css('margin-left', '24px');
             } else {
                 $collapseIcon.css('transform', 'rotate(180deg)');
                 $collapseIcon.data('rotated', true);
+                $site.css('margin-left', '0');
             }
         });
     });

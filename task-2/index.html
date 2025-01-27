@@ -14,11 +14,9 @@
     <!-- header -->
     <header class="container header">
       <nav class="header__nav">
-        <img
-          class="header__nav__hamburger cursor-pointer"
-          src="./assets/images/hamburger.svg"
-          alt="menu icon"
-        />
+        <button class="header__nav__hamburger cursor-pointer">
+          <img src="./assets/images/hamburger.svg" alt="menu icon" />
+        </button>
         <a class="header__nav__logo" href="#">
           <img
             class="header__nav__logo__img"
@@ -27,11 +25,21 @@
           />
         </a>
         <div class="header__nav__menu">
-          <select class="header__nav__menu__select inter-13-bold" name="place">
-            <option value="main street tower - usa">
-              Main Street Tower - USA
-            </option>
-          </select>
+          <div class="header__nav__menu__dropdown">
+            <img
+              class="header__nav__menu__dropdown__img"
+              src="./assets/images/m-logo.png"
+              alt="main street logo"
+            />
+            <select
+              class="header__nav__menu__dropdown__select inter-13-bold"
+              name="place"
+            >
+              <option value="main street tower - usa">
+                Main Street Tower - USA
+              </option>
+            </select>
+          </div>
           <div class="header__nav__menu__options">
             <button class="header__nav__menu__options__btn cursor-pointer">
               <img
@@ -56,10 +64,10 @@
               >
                 CS
               </button>
-              <ul
-                class="header__nav__menu__options__user__options"
-              >
-                <li class="header__nav__menu__options__user__options__li inter-13-regular">
+              <ul class="header__nav__menu__options__user__options">
+                <li
+                  class="header__nav__menu__options__user__options__li inter-13-regular"
+                >
                   <img
                     class="header__nav__menu__options__user__options__li__img"
                     src="./assets/images/my-account.svg"
@@ -67,7 +75,9 @@
                   />
                   My Account
                 </li>
-                <li class="header__nav__menu__options__user__options__li inter-13-regular">
+                <li
+                  class="header__nav__menu__options__user__options__li inter-13-regular"
+                >
                   <img
                     class="header__nav__menu__options__user__options__li__img"
                     src="./assets/images/my-organization.svg"
@@ -75,7 +85,9 @@
                   />
                   My Organization
                 </li>
-                <li class="header__nav__menu__options__user__options__li inter-13-regular">
+                <li
+                  class="header__nav__menu__options__user__options__li inter-13-regular"
+                >
                   <img
                     class="header__nav__menu__options__user__options__li__img"
                     src="./assets/images/notifications.svg"
@@ -83,7 +95,9 @@
                   />
                   Notifications
                 </li>
-                <li class="header__nav__menu__options__user__options__li inter-13-regular">
+                <li
+                  class="header__nav__menu__options__user__options__li inter-13-regular"
+                >
                   <img
                     class="header__nav__menu__options__user__options__li__img"
                     src="./assets/images/logout-in-circle.svg"
@@ -102,14 +116,21 @@
       <!-- aside -->
       <aside class="aside">
         <div class="aside__top">
-          <select
-            class="aside-select inter-13-bold"
-            name="place"
-          >
-            <option value="main street tower - usa">
-              Main Street Tower - USA
-            </option>
-          </select>
+          <div class="aside-dropdown">
+            <img
+              class="header__nav__menu__dropdown__img"
+              src="./assets/images/m-logo.png"
+              alt="main street logo"
+            />
+            <select
+              class="header__nav__menu__dropdown__select inter-13-bold"
+              name="place"
+            >
+              <option value="main street tower - usa">
+                Main Street Tower - USA
+              </option>
+            </select>
+          </div>
           <button class="aside__top__booking-btn cursor-pointer">
             <img
               class="aside__top__booking-btn__img aside-icon"
@@ -122,7 +143,7 @@
             >
           </button>
           <ul class="aside__top__menu">
-            <li class="aside__top__menu__li cursor-pointer hover-bg-white">
+            <li class="aside__top__menu__li cursor-pointer hover-primary">
               <img
                 class="aside__top__menu__li__img aside-icon"
                 src="./assets/images/booking-list.svg"
@@ -134,7 +155,7 @@
                 Booking List
               </span>
             </li>
-            <li class="aside__top__menu__li cursor-pointer hover-bg-white">
+            <li class="aside__top__menu__li cursor-pointer hover-primary">
               <img
                 class="aside__top__menu__li__img aside-icon"
                 src="./assets/images/calandar.svg"
@@ -146,7 +167,7 @@
                 Calendar
               </span>
             </li>
-            <li class="aside__top__menu__li cursor-pointer hover-bg-white">
+            <li class="aside__top__menu__li cursor-pointer hover-primary">
               <img
                 class="aside__top__menu__li__img aside-icon"
                 src="./assets/images/user-management.svg"
@@ -158,7 +179,7 @@
                 User Management
               </span>
             </li>
-            <li class="aside__top__menu__li cursor-pointer hover-bg-white">
+            <li class="aside__top__menu__li cursor-pointer hover-primary">
               <img
                 class="aside__top__menu__li__img aside-icon"
                 src="./assets/images/project-management.svg"
@@ -171,7 +192,7 @@
               </span>
             </li>
             <div class="aside__top__menu__diff">
-              <li class="aside__top__menu__li cursor-pointer hover-bg-white">
+              <li class="aside__top__menu__li cursor-pointer hover-primary">
                 <img
                   class="aside__top__menu__li__img aside-icon"
                   src="./assets/images/site-details.svg"
@@ -183,7 +204,7 @@
                   Site Details
                 </span>
               </li>
-              <li class="aside__top__menu__li cursor-pointer hover-bg-white">
+              <li class="aside__top__menu__li cursor-pointer hover-primary">
                 <img
                   class="aside__top__menu__li__img aside-icon"
                   src="./assets/images/availability.svg"
@@ -198,7 +219,7 @@
             </div>
           </ul>
         </div>
-        <button class="aside__collapse-btn cursor-pointer hover-bg-white">
+        <button class="aside__collapse-btn cursor-pointer hover-primary">
           <img
             class="aside__collapse-btn__img aside-icon"
             src="./assets/images/collapse.svg"
@@ -212,170 +233,176 @@
         </button>
       </aside>
 
-      <div class="site">
-        <div class="site__banner">
-          <img
-            class="site__banner__logo"
-            src="./assets/images/m-logo.png"
-            alt="main street tower logo"
-          />
-          <div class="site__banner__card">
-            <h6 class="site__banner__card__greeting">Welcome To</h6>
-            <h2 class="site__banner__card__place">Main Street Tower</h2>
+      <main class="main">
+        <div class="site">
+          <div class="site__banner">
+            <img
+              class="site__banner__logo"
+              src="./assets/images/m-logo.png"
+              alt="main street tower logo"
+            />
+            <div class="site__banner__card">
+              <h6 class="site__banner__card__greeting">Welcome To</h6>
+              <h2 class="site__banner__card__place">Main Street Tower</h2>
+            </div>
           </div>
+          <section class="site__info">
+            <div class="site__info__box">
+              <img
+                class="site__info__box__img"
+                src="./assets/images/location.svg"
+                alt="location icon"
+              />
+              <h4 class="site__info__box__text inter-15-bold">
+                555 Main St.<br />
+                Township, CA 90001
+              </h4>
+            </div>
+            <div class="site__info__box">
+              <img
+                class="site__info__box__img"
+                src="./assets/images/timing.svg"
+                alt="clock icon"
+              />
+              <h4 class="site__info__box__text inter-15-bold">
+                7am - 5pm (PDT)
+              </h4>
+            </div>
+            <div class="site__info__box">
+              <img
+                class="site__info__box__img"
+                src="./assets/images/working-days.svg"
+                alt="calendar icon"
+              />
+              <h4 class="site__info__box__text inter-15-bold">
+                Monday - Friday
+              </h4>
+            </div>
+          </section>
+          <hr class="site__hr" />
+          <section class="site__contacts">
+            <h3 class="site__contacts__title">Site Contacts</h3>
+            <div class="site__contacts__container">
+              <div class="site__contacts__container__contact">
+                <div class="site__contacts__container__contact__card">
+                  <div class="site__contacts__container__contact__card__user">
+                    <p class="inter-13-regular">General Foreman</p>
+                    <h4
+                      class="site__contacts__container__contact__card__user__name inter-15-bold"
+                    >
+                      Tony Doe
+                    </h4>
+                  </div>
+                  <p
+                    class="site__contacts__container__contact__card__number inter-13-regular"
+                  >
+                    (510) 577-9987
+                  </p>
+                  <p
+                    class="site__contacts__container__contact__card__email inter-13-regular"
+                  >
+                    azeezhabeebomobolaji@gmail.com
+                  </p>
+                </div>
+                <div class="site__contacts__container__contact__card">
+                  <div class="site__contacts__container__contact__card__user">
+                    <p class="inter-13-regular">Building - Superintendent</p>
+                    <h4
+                      class="site__contacts__container__contact__card__user__name inter-15-bold"
+                    >
+                      Adam Doe
+                    </h4>
+                  </div>
+                  <p
+                    class="site__contacts__container__contact__card__number inter-13-regular"
+                  >
+                    (510) 577-9987
+                  </p>
+                  <p
+                    class="site__contacts__container__contact__card__email inter-13-regular"
+                  >
+                    azeezhabeebomobolaji@gmail.com
+                  </p>
+                </div>
+                <div class="site__contacts__container__contact__card">
+                  <div class="site__contacts__container__contact__card__user">
+                    <p class="inter-13-regular">Site - Superintendent</p>
+                    <h4
+                      class="site__contacts__container__contact__card__user__name inter-15-bold"
+                    >
+                      Kyle Doe
+                    </h4>
+                  </div>
+                  <p
+                    class="site__contacts__container__contact__card__number inter-13-regular"
+                  >
+                    (510) 577-9987
+                  </p>
+                  <p
+                    class="site__contacts__container__contact__card__email inter-13-regular"
+                  >
+                    azeezhabeebomobolaji@gmail.com
+                  </p>
+                </div>
+                <div class="site__contacts__container__contact__card">
+                  <div class="site__contacts__container__contact__card__user">
+                    <p class="inter-13-regular">Senior - Superintendent</p>
+                    <h4
+                      class="site__contacts__container__contact__card__user__name inter-15-bold"
+                    >
+                      Brett Doe
+                    </h4>
+                  </div>
+                  <p
+                    class="site__contacts__container__contact__card__number inter-13-regular"
+                  >
+                    (510) 577-9987
+                  </p>
+                  <p
+                    class="site__contacts__container__contact__card__email inter-13-regular"
+                  >
+                    azeezhabeebomobolaji@gmail.com
+                  </p>
+                </div>
+                <div class="site__contacts__container__contact__card">
+                  <div class="site__contacts__container__contact__card__user">
+                    <p class="inter-13-regular">Safety Manager</p>
+                    <h4
+                      class="site__contacts__container__contact__card__user__name inter-15-bold"
+                    >
+                      Jack Doe
+                    </h4>
+                  </div>
+                  <p
+                    class="site__contacts__container__contact__card__number inter-13-regular"
+                  >
+                    (510) 577-9987
+                  </p>
+                  <p
+                    class="site__contacts__container__contact__card__email inter-13-regular"
+                  >
+                    azeezhabeebomobolaji@gmail.com
+                  </p>
+                </div>
+              </div>
+              <div class="site__contacts__container__warning">
+                <p class="inter-13-bold">
+                  This is where you can add in information to help your users
+                  manage their deliveries better.
+                </p>
+                <p class="inter-13-bold">Site access times 9am - 5pm</p>
+                <p class="inter-13-bold">
+                  Only open on working days (Monday - Friday)
+                </p>
+                <p class="inter-13-bold">
+                  Please make a delivery by selecting 'Schedule a Delivery' from
+                  the menu
+                </p>
+              </div>
+            </div>
+          </section>
         </div>
-        <section class="site__info">
-          <div class="site__info__box">
-            <img
-              class="site__info__box__img"
-              src="./assets/images/location.svg"
-              alt="location icon"
-            />
-            <h4 class="site__info__box__text inter-15-bold">
-              555 Main St.<br />
-              Township, CA 90001
-            </h4>
-          </div>
-          <div class="site__info__box">
-            <img
-              class="site__info__box__img"
-              src="./assets/images/timing.svg"
-              alt="clock icon"
-            />
-            <h4 class="site__info__box__text inter-15-bold">7am - 5pm (PDT)</h4>
-          </div>
-          <div class="site__info__box">
-            <img
-              class="site__info__box__img"
-              src="./assets/images/working-days.svg"
-              alt="calendar icon"
-            />
-            <h4 class="site__info__box__text inter-15-bold">Monday - Friday</h4>
-          </div>
-        </section>
-        <hr class="site__hr" />
-        <section class="site__contacts">
-          <h3 class="site__contacts__title">Site Contacts</h3>
-          <div class="site__contacts__container">
-            <div class="site__contacts__container__contact">
-              <div class="site__contacts__container__contact__card">
-                <div class="site__contacts__container__contact__card__user">
-                  <p class="inter-13-regular">General Foreman</p>
-                  <h4
-                    class="site__contacts__container__contact__card__user__name inter-15-bold"
-                  >
-                    Tony Doe
-                  </h4>
-                </div>
-                <p
-                  class="site__contacts__container__contact__card__number inter-13-regular"
-                >
-                  (510) 577-9987
-                </p>
-                <p
-                  class="site__contacts__container__contact__card__email inter-13-regular"
-                >
-                  azeezhabeebomobolaji@gmail.com
-                </p>
-              </div>
-              <div class="site__contacts__container__contact__card">
-                <div class="site__contacts__container__contact__card__user">
-                  <p class="inter-13-regular">Building - Superintendent</p>
-                  <h4
-                    class="site__contacts__container__contact__card__user__name inter-15-bold"
-                  >
-                    Adam Doe
-                  </h4>
-                </div>
-                <p
-                  class="site__contacts__container__contact__card__number inter-13-regular"
-                >
-                  (510) 577-9987
-                </p>
-                <p
-                  class="site__contacts__container__contact__card__email inter-13-regular"
-                >
-                  azeezhabeebomobolaji@gmail.com
-                </p>
-              </div>
-              <div class="site__contacts__container__contact__card">
-                <div class="site__contacts__container__contact__card__user">
-                  <p class="inter-13-regular">Site - Superintendent</p>
-                  <h4
-                    class="site__contacts__container__contact__card__user__name inter-15-bold"
-                  >
-                    Kyle Doe
-                  </h4>
-                </div>
-                <p
-                  class="site__contacts__container__contact__card__number inter-13-regular"
-                >
-                  (510) 577-9987
-                </p>
-                <p
-                  class="site__contacts__container__contact__card__email inter-13-regular"
-                >
-                  azeezhabeebomobolaji@gmail.com
-                </p>
-              </div>
-              <div class="site__contacts__container__contact__card">
-                <div class="site__contacts__container__contact__card__user">
-                  <p class="inter-13-regular">Senior - Superintendent</p>
-                  <h4
-                    class="site__contacts__container__contact__card__user__name inter-15-bold"
-                  >
-                    Brett Doe
-                  </h4>
-                </div>
-                <p
-                  class="site__contacts__container__contact__card__number inter-13-regular"
-                >
-                  (510) 577-9987
-                </p>
-                <p
-                  class="site__contacts__container__contact__card__email inter-13-regular"
-                >
-                  azeezhabeebomobolaji@gmail.com
-                </p>
-              </div>
-              <div class="site__contacts__container__contact__card">
-                <div class="site__contacts__container__contact__card__user">
-                  <p class="inter-13-regular">Safety Manager</p>
-                  <h4
-                    class="site__contacts__container__contact__card__user__name inter-15-bold"
-                  >
-                    Jack Doe
-                  </h4>
-                </div>
-                <p
-                  class="site__contacts__container__contact__card__number inter-13-regular"
-                >
-                  (510) 577-9987
-                </p>
-                <p
-                  class="site__contacts__container__contact__card__email inter-13-regular"
-                >
-                  azeezhabeebomobolaji@gmail.com
-                </p>
-              </div>
-            </div>
-            <div class="site__contacts__container__warning">
-              <p class="inter-13-bold">
-                This is where you can add in information to help your users
-                manage their deliveries better.
-              </p>
-              <p class="inter-13-bold">Site access times 9am - 5pm</p>
-              <p class="inter-13-bold">
-                Only open on working days (Monday - Friday)
-              </p>
-              <p class="inter-13-bold">
-                Please make a delivery by selecting 'Schedule a Delivery' from
-                the menu
-              </p>
-            </div>
-          </div>
-        </section>
-      </div>
+      </main>
     </div>
 
     <!-- script -->
