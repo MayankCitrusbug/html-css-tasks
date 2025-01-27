@@ -59,6 +59,10 @@ body {
 .cursor-pointer {
   cursor: pointer;
 }
+.hover-bg-white:hover {
+  background: var(--mono-white);
+  border-radius: 6px;
+}
 
 /* header */
 
@@ -207,6 +211,9 @@ body {
 .aside__top__booking-btn__img {
   margin: 2px 0;
 }
+.aside__top__booking-btn:hover {
+  background: rgb(5, 112, 96);
+}
 .aside__top__menu {
   list-style: none;
   padding: 8px 0 48px 0;
@@ -219,6 +226,7 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
+  width: 100%;
   padding: 5px 8px;
   color: var(--mono-label);
 }
@@ -436,7 +444,7 @@ body {
   .aside__collapse-btn {
     display: none;
   }
-  
+
   .site {
     margin: 4px 15px 15px 15px;
     height: calc(100dvh - 86px);
@@ -451,7 +459,7 @@ body {
   }
   .site__info {
     gap: 15px;
-    padding:15px;
+    padding: 15px;
   }
   .site__info__box {
     width: calc(100% / 2 - 8px);
@@ -496,14 +504,14 @@ body {
     --warning-light: rgba(255, 235, 191, 1);
     --danger-default: rgba(202, 40, 103, 1);
   }
-  
+
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     line-height: 1;
   }
-  
+
   html {
     font-size: 10px;
   }
@@ -512,9 +520,9 @@ body {
     color: var(--mono-body);
     font-family: "Inter";
   }
-  
+
   /* utility classes */
-  
+
   .inter-13-regular {
     font-size: 13px;
     font-weight: 500;
@@ -543,9 +551,9 @@ body {
   .cursor-pointer {
     cursor: pointer;
   }
-  
+
   /* header */
-  
+
   .header__nav {
     display: flex;
     padding: 6px 0;
@@ -641,14 +649,14 @@ body {
     height: 16px;
     margin-right: 12px;
   }
-  
+
   .content {
     display: flex;
     gap: 0;
   }
-  
+
   /* aside */
-  
+
   .aside {
     padding: 8px 24px 24px 24px;
     display: flex;
@@ -733,9 +741,9 @@ body {
   .rotate-18 {
     transform: rotate(180deg) !important;
   }
-  
+
   /* site */
-  
+
   .site {
     margin: 4px 24px 24px 24px;
     flex: 1;
@@ -745,7 +753,7 @@ body {
     scrollbar-width: none;
     background: var(--mono-white);
   }
-  
+
   .site__banner {
     background-image: url("../images/main-street-tower.png");
     background-position: center;
@@ -851,19 +859,19 @@ body {
   .site__contacts__container__contact__card__email {
     color: var(--secondary-default);
   }
-  
+
   @media (max-width: 1599px) {
     .site__contacts__container__contact__card {
       width: calc(100% / 2 - 8px);
     }
   }
-  
+
   @media (max-width: 1279px) {
     .site__contacts__container {
       flex-direction: column-reverse;
     }
   }
-  
+
   @media (max-width: 1023px) {
     .site__info {
       flex-wrap: wrap;
@@ -873,18 +881,18 @@ body {
       width: calc(100% / 2 - 15px);
     }
   }
-  
+
   @media (max-width: 899px) {
     .site__contacts__container__contact__card {
       width: calc(100%);
     }
   }
-  
+
   @media (max-width: 767px) {
     .container {
       padding: 0 15px;
     }
-  
+
     .header__nav,
     .header__nav__menu__options {
       gap: 15px;
@@ -901,7 +909,7 @@ body {
     .header__nav__menu {
       justify-content: end;
     }
-  
+
     .aside {
       display: none;
       position: absolute;
@@ -920,7 +928,7 @@ body {
     .aside__collapse-btn {
       display: none;
     }
-  
+
     .site {
       margin: 4px 15px 15px 15px;
       height: calc(100dvh - 86px);
@@ -957,18 +965,18 @@ body {
       width: calc(100% / 2 - 8px);
     }
   }
-  
+
   @media (max-width: 599px) {
     .site__contacts__container__contact__card {
       width: 100%;
     }
   }
-  
+
   @media (max-width: 479px) {
     .container {
       padding: 0 10px;
     }
-  
+
     .header__nav {
       padding: 0;
     }
@@ -979,17 +987,19 @@ body {
     .header__nav__menu__options__user__btn {
       padding: 6px 8px;
     }
-  
+
     .aside {
       display: none;
       position: absolute;
       background: var(--mono-bg);
       padding: 4px 10px 10px 10px;
     }
-    .aside__top {
+    .aside__top,
+    .aside__top__menu,
+    .aside__top__menu__diff {
       gap: 12px;
     }
-  
+
     .site {
       margin: 4px 10px 10px 10px;
       height: calc(100dvh - 74px);
@@ -1027,4 +1037,4 @@ body {
       gap: 12px;
     }
   }
-  }
+}
