@@ -59,6 +59,10 @@ body {
 .cursor-pointer {
   cursor: pointer;
 }
+.hover-primary:hover {
+  background: var(--mono-input);
+  border-radius: 6px;
+}
 
 /* header */
 
@@ -70,9 +74,15 @@ body {
 }
 .header__nav__hamburger {
   display: none;
+  border: none;
+  background: var(--mono-bg);
 }
 .header__nav__logo {
-  padding: 4px 64px 4px 0;
+  padding: 7px 64px 7px 0;
+}
+.header__nav__logo__img {
+  width: 138px;
+  height: auto;
 }
 .header__nav__menu {
   display: flex;
@@ -81,11 +91,22 @@ body {
   gap: 24px;
   width: 100%;
 }
-.header__nav__menu__select {
-  padding: 9px 12px;
+.header__nav__menu__dropdown {
   background: rgba(9, 115, 98, 0.04);
+  display: flex;
+  align-items: center;
+  padding: 4px 12px;
+}
+.header__nav__menu__dropdown__img {
+  width: 32px;
+  height: 32px;
+}
+.header__nav__menu__dropdown__select {
+  background: transparent;
+  padding: 0 12px 0 8px;
   color: var(--mono-body);
   border: none;
+  font-family: "Inter";
 }
 .header__nav__menu__options {
   display: flex;
@@ -136,7 +157,7 @@ body {
   display: none;
 }
 .header__nav__menu__options__user__options::before {
-  content: "\A";
+  content: "";
   border-style: solid;
   border-width: 21px 30px 21px 0px;
   border-color: transparent var(--mono-white) transparent transparent;
@@ -151,6 +172,9 @@ body {
   display: flex;
   align-items: center;
   text-wrap: nowrap;
+}
+.header__nav__menu__options__user__options__li:not(:last-child) {
+  margin-bottom: 4px;
 }
 .header__nav__menu__options__user__options__li__img {
   width: 16px;
@@ -172,7 +196,7 @@ body {
   justify-content: space-between;
   gap: 24px;
   position: static;
-  height: calc(100dvh - 69px);
+  height: calc(100dvh - 68px);
 }
 .aside-icon {
   width: 20px;
@@ -186,25 +210,29 @@ body {
   flex-direction: column;
   gap: 24px;
 }
-.aside-select {
-  padding: 9px 12px;
+.aside-dropdown {
   background: rgba(9, 115, 98, 0.04);
-  color: var(--mono-body);
-  border: none;
   display: none;
+  align-items: center;
+  padding: 4px 12px;
 }
 .aside__top__booking-btn {
   padding: 8px;
   display: flex;
   gap: 12px;
+  justify-content: center;
   width: 100%;
   color: var(--mono-white);
   background: var(--primary-default);
   border: none;
   border-radius: 5px;
+  font-family: "Inter";
 }
 .aside__top__booking-btn__img {
   margin: 2px 0;
+}
+.aside__top__booking-btn:hover {
+  background: rgb(5, 112, 96);
 }
 .aside__top__menu {
   list-style: none;
@@ -218,6 +246,7 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
+  width: 100%;
   padding: 5px 8px;
   color: var(--mono-label);
 }
@@ -252,16 +281,16 @@ body {
 
 /* site */
 
-.site {
-  margin: 4px 24px 24px 24px;
-  flex: 1;
-  height: calc(100dvh - 97px);
-  border-radius: 6px;
+.main {
+  height: calc(100dvh - 92px);
   overflow-y: auto;
-  scrollbar-width: none;
-  background: var(--mono-white);
 }
-
+.site {
+  background: var(--mono-white);
+  border-radius: 6px;
+  margin: 0 24px;
+  overflow-x: hidden;
+}
 .site__banner {
   background-image: url("../images/main-street-tower.png");
   background-position: center;
@@ -356,7 +385,7 @@ body {
   display: flex;
   text-align: center;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
   border: 1px solid var(--warning-bg);
   border-radius: 8px;
   background: var(--warning-bg);
@@ -397,6 +426,11 @@ body {
 }
 
 @media (max-width: 767px) {
+  .inter-15-bold {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
   .header__nav,
   .header__nav__menu__options {
     gap: 15px;
@@ -407,7 +441,7 @@ body {
   .header__nav__logo {
     padding: 4px 0;
   }
-  .header__nav__menu__select {
+  .header__nav__menu__dropdown {
     display: none;
   }
   .header__nav__menu {
@@ -422,12 +456,14 @@ body {
     position: absolute;
     background: var(--mono-bg);
     padding: 4px 15px 15px 15px;
+    height: calc(100dvh - 62px);
+    margin-top: -1px;
   }
   .aside__top {
     gap: 16px;
   }
-  .aside-select {
-    display: block;
+  .aside-dropdown {
+    display: flex;
   }
   .aside__top__menu {
     padding: 0;
@@ -435,10 +471,12 @@ body {
   .aside__collapse-btn {
     display: none;
   }
-  
+
+  .main {
+    height: calc(100dvh - 79px);
+  }
   .site {
-    margin: 4px 15px 15px 15px;
-    height: calc(100dvh - 86px);
+    margin: 0 15px;
   }
   .site__banner__logo {
     margin: 15px;
@@ -450,17 +488,21 @@ body {
   }
   .site__info {
     gap: 15px;
-    padding:15px;
+    padding: 15px;
   }
   .site__info__box {
     width: calc(100% / 2 - 8px);
+  }
+  .site__info__box__img {
+    width: 18px;
+    height: 18px;
   }
   .site__contacts {
     padding: 15px;
   }
   .site__contacts__container__warning {
     padding: 15px;
-    gap: 20px;
+    gap: 16px;
   }
   .site__contacts__container__contact__card {
     width: calc(100% / 2 - 8px);
@@ -480,5 +522,72 @@ body {
 @media (max-width: 479px) {
   .site__info__box {
     width: 100%;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .header__nav {
+    padding: 0;
+  }
+  .header__nav,
+  .header__nav__menu__options {
+    gap: 12px;
+  }
+  .header__nav__menu__options__user__btn {
+    padding: 6px 8px;
+  }
+
+  .aside {
+    display: none;
+    position: absolute;
+    background: var(--mono-bg);
+    padding: 4px 10px 10px 10px;
+    height: calc(100dvh - 50px);
+  }
+  .aside__top,
+  .aside__top__menu,
+  .aside__top__menu__diff {
+    gap: 12px;
+  }
+
+  .main {
+    height: calc(100dvh - 60px);
+  }
+  .site {
+    margin: 0 10px;
+  }
+  .site__banner__logo {
+    margin: 10px;
+    width: 50px;
+  }
+  .site__banner__card {
+    margin-top: 10px;
+    padding: 10px;
+  }
+  .site__banner__card__place {
+    font-size: 24px;
+  }
+  .site__info {
+    gap: 12px;
+    padding: 10px;
+  }
+  .site__info__box {
+    width: 100%;
+  }
+  .site__contacts {
+    padding: 10px;
+  }
+  .site__contacts__title {
+    font-size: 20px;
+  }
+  .site__contacts__container,
+  .site__contacts__container__contact {
+    gap: 12px;
+  }
+  .site__contacts__container__warning {
+    padding: 10px;
+    gap: 12px;
   }
 }
